@@ -1,0 +1,200 @@
+body {
+    background-color: #fff;
+    display: grid;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+}
+
+/* 上方条栏 */
+.toppic_bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+    position: fixed;
+    top: 0px;
+    height: 49px;
+    width: 100%;
+    background-color: #389;
+}
+
+.toppic_bar_container {
+    height: 80%;
+    width: 74%;
+    display: flex;
+    align-items: center;
+}
+
+.toppic_bar_container_menu {
+    height: 20px;
+    width: auto;
+}
+
+.toppic_bar_container_logo {
+    position: relative;
+    left: 1.6vw;
+    height: 32px;
+    width: auto;
+}
+
+.toppic_bar_container_search_box {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.toppic_bar_container_search_box_bar {
+    display: flex;
+    height: 36px;
+    width: 240px;
+    border-radius: 36px;
+    background-color: rgb(42, 116, 130);
+    align-items: center;
+    justify-self: flex-end;
+}
+
+.toppic_bar_container_search_box input {
+    color: aliceblue;
+    flex: auto;
+    position: relative;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    line-height: 28px;
+    left: 18px;
+    max-width: 180px;
+    caret-color: aliceblue;
+}
+
+.toppic_bar_container_search_box input::placeholder {
+    color: aliceblue;
+}
+
+.toppic_bar_container_search_box_button {
+    flex: auto;
+    justify-self: flex-end;
+    position: relative;
+    left: 25px;
+    align-self: center;
+    height: 20px;
+    width: auto;
+}
+
+/* 主页intro */
+.intro {
+    text-align: center;
+    position: absolute;
+    top: 0vw;
+    left: 5vw;
+    right: 5vw;
+    margin: 18vw 0vw 20vw 0vw;
+    z-index: 2;
+}
+
+.intro h1 {
+    font-size: 75px;
+    margin-top: auto;
+    color: rgb(17, 190, 164);
+    text-shadow: rgb(93, 93, 93) 2px 0 10px;
+}
+
+.intro h2 {
+    font-size: 50px;
+    color: rgb(23, 233, 163);
+    text-shadow: rgb(93, 93, 93) 2px 0 10px;
+}
+
+.intro h3 {
+    font-size: 20px;
+    color: rgb(224, 224, 224);
+    letter-spacing: 2px;
+    text-shadow: rgb(75, 75, 75) 2px 0 5px;
+}
+
+.animation_arrow {
+    position: relative;
+    top: 10vh;
+}
+
+.animation_arrow p {
+    position: relative;
+    color: rgba(224, 224, 224, 0.8);
+    font-size: 16px;
+    letter-spacing: 5px;
+    text-shadow: rgb(128, 128, 128) 0px 0 5px;
+}
+
+@keyframes arrow_down {
+    0% {
+        opacity: 1
+    }
+
+    90% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0,1.36vw,0)
+    }
+}
+
+.arrow_down {
+    filter: opacity(50%);
+    position: relative;
+    height: 14px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    animation: arrow_down 2s infinite;
+}
+
+/*选项*/
+.content {
+    width: 50%;
+    height: fit-content;
+}
+
+.content > h1 {
+
+}
+
+.content > h2 {
+
+}
+
+.content > h3 {
+
+}
+
+.content > h4 {
+
+}
+
+.content > h5 {
+
+}
+
+.content > h6 {
+
+}
+
+.content > p {
+
+}
+
+.content > a {
+    
+}
+
+.separation_line {
+    justify-self: center;    
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 60vw;
+    height: 1px;
+    background: linear-gradient(to right, #fff, #66666667, #fff);
+}
