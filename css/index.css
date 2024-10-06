@@ -4,6 +4,7 @@ body {
     margin-top: 0%;
     margin-left: 0%;
     margin-right: 0%;
+    margin-bottom: 0%;
 }
 
 /* 上方条栏 */
@@ -116,7 +117,7 @@ body {
 
 .animation_arrow {
     position: relative;
-    top: 10vh;
+    top: 160px;
 }
 
 .animation_arrow p {
@@ -152,7 +153,9 @@ body {
     animation: arrow_down 2s infinite;
 }
 
-/*选项*/
+
+
+
 .separation_line {
     justify-self: center;    
     margin-top: 25px;
@@ -162,6 +165,8 @@ body {
     background: linear-gradient(to right, #fff, #66666667, #fff);
 }
 
+
+/*正文*/
 .content {
     width: 80vw;
     margin-top: 100px;
@@ -171,20 +176,19 @@ body {
     justify-items: center;
 }
 
+/*游戏版本选项*/
 .content_gateways {
     margin-top: 50px;
     margin-bottom: 50px;
     justify-items: center;
     height: fit-content;
-    display: grid;
-    grid-template-columns: 32vw 32vw;
+    display: flex;
+    column-gap: 12vw;
 }
 
 .content_gateways_card {
     flex: 1;
     padding: 15px;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
     width: 18vw;
     height: 10vh;
     background-color: #6c6;
@@ -195,11 +199,28 @@ body {
     overflow: hidden;
 }
 
+.content_gateways_card > img {
+    flex: 1;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content_gateways_card > h2 {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    color: #fff;
+    font-size: 36px;
+}
+
+/*详细选项*/
 .content_list {
     justify-items: center;
     height: fit-content;
     display: grid;
     grid-template-columns: 32vw 32vw;
+    row-gap: 6vh;
 }
 
 .content_list > a, .content_gateways > a {
@@ -208,8 +229,6 @@ body {
 
 .content_list_card {
     padding: 15px;
-    margin-top: 2vh;
-    margin-bottom: 3vh;
     width: 18vw;
     height: calc(8vw / 2.3);
     background-color: #69c;
@@ -220,58 +239,35 @@ body {
     overflow: hidden;
 }
 
-.content_list_card_icon {
+.content_list_card > img {
     flex: 1;
     object-fit: contain;
     max-height: 100%;
     max-width: 100%;
 }
 
-.content_list_card_txt {
+.content_list_card > h2 {
     display: flex;
     justify-content: center;
     flex: 3;
-}
-
-.content_list_card_txt > h2 {
-    margin-right: 16px;
-    margin-top: 10px;
-    margin-bottom: 10px;
     color: #fff;
 }
 
-.content_list_card_txt > p {
-
-}
-
-.content > h1 {
-
-}
-
-.content > h2 {
-
-}
-
-.content > h3 {
-
-}
-
-.content > h4 {
-
-}
-
-.content > h5 {
-
-}
-
-.content > h6 {
-
-}
-
 .content > p {
-
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
-.content > a {
-    
+.bottom {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    position: relative;
+    margin-top: 49px;
+    width: 100vw;
+    height: fit-content;
+    background-color: #9cc;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    column-gap: 16px;
 }
