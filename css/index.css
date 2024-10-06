@@ -153,9 +153,92 @@ body {
 }
 
 /*选项*/
+.separation_line {
+    justify-self: center;    
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 60vw;
+    height: 1px;
+    background: linear-gradient(to right, #fff, #66666667, #fff);
+}
+
 .content {
-    width: 50%;
+    display: grid;
     height: fit-content;
+    justify-self: center;
+    justify-items: center;
+}
+
+.content_gateways {
+    margin-top: 50px;
+    justify-items: center;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 32vw 32vw;
+}
+
+.content_gateways_card {
+    flex: 1;
+    padding: 15px;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    width: 18vw;
+    height: 10vh;
+    background-color: #6c6;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.content_list {
+    justify-items: center;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 32vw 32vw;
+}
+
+.content_list > a, .content_gateways > a {
+    text-decoration: none;
+}
+
+.content_list_card {
+    padding: 15px;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+    width: 18vw;
+    height: calc(8vw / 2.3);
+    background-color: #69c;
+    border-radius: 3vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.content_list_card_icon {
+    flex: 1;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content_list_card_txt {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+}
+
+.content_list_card_txt > h2 {
+    margin-right: 16px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.content_list_card_txt > p {
+
 }
 
 .content > h1 {
@@ -188,13 +271,4 @@ body {
 
 .content > a {
     
-}
-
-.separation_line {
-    justify-self: center;    
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 60vw;
-    height: 1px;
-    background: linear-gradient(to right, #fff, #66666667, #fff);
 }
