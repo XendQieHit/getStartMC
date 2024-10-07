@@ -1,10 +1,7 @@
 body {
     background-color: #fff;
     display: grid;
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-right: 0%;
-    margin-bottom: 0%;
+    margin: 0%;
 }
 
 /* 上方条栏 */
@@ -281,10 +278,11 @@ body {
         .content {
             width: 90vw;
             margin-top: 2.56vw;
-            display: grid;
+            display: flex;
             height: fit-content;
             justify-self: center;
-            justify-items: center;
+            align-items: center;
+            flex-direction: column;
         }
     }    
 
