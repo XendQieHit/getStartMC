@@ -85,12 +85,14 @@ body {
         
         .toppic_bar_container_search_box_bar {
             display: flex;
-            height: 36px;
+            padding: 16px;
+            height: 4px;
             width: 240px;
             border-radius: 36px;
             background-color: rgb(42, 116, 130);
             align-items: center;
             justify-self: flex-end;
+            justify-content: space-between;
         }    
     }
     /* 手机端 */
@@ -98,12 +100,14 @@ body {
 
         .toppic_bar_container_search_box_bar {
             display: flex;
-            height: 36px;
+            padding: 16px;
+            height: 4px;
             width: 30vw;
             border-radius: 36px;
             background-color: rgb(42, 116, 130);
             align-items: center;
             justify-self: flex-end;
+            justify-content: space-between;
         }    
     }
 
@@ -119,10 +123,8 @@ body {
             border: none;
             background: none;
             outline: none;
-            float: left;
             padding: 0;
             line-height: 28px;
-            left: 18px;
             max-width: 180px;
             caret-color: aliceblue;
         }
@@ -137,10 +139,8 @@ body {
             border: none;
             background: none;
             outline: none;
-            float: left;
             padding: 0;
             line-height: 28px;
-            left: 18px;
             max-width: 23vw;
             caret-color: aliceblue;
         }
@@ -159,7 +159,6 @@ body {
                 flex: auto;
                 justify-self: flex-end;
                 position: relative;
-                left: 25px;
                 align-self: center;
                 height: 20px;
                 width: auto;
@@ -470,10 +469,6 @@ body {
             overflow: hidden;
         }
     }
-
-
-
-
 
 .content_list_card > img {
     flex: 1;
