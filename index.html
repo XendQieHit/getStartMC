@@ -7,20 +7,43 @@
         <!--第三方css-->
         <title>New Web</title>
         <style>
-            .background_img_container {
-                z-index: -1;
-                position: relative;
-                justify-self: center;
-                width: 100vw;
-                height: 62.5vw;
-                overflow: hidden;
+            @media (min-width: 901px) {
+                
+                .background_img_container {
+                    z-index: -1;
+                    position: relative;
+                    justify-self: center;
+                    width: 100vw;
+                    height: 62.5vw;
+                    overflow: hidden;
+                }
+
+                .background_img {
+                    position: absolute;
+                    justify-self: center;
+                    width: 100vw;
+                    height: auto;
+                    object-fit: cover;
+                }
             }
-            .background_img {
-                position: absolute;
-                justify-self: center;
-                width: 100vw;
-                height: auto;
-                object-fit: cover;
+            @media (max-width: 900px) {
+
+                .background_img_container {
+                    z-index: -1;
+                    position: relative;
+                    justify-self: center;
+                    width: 100vw;
+                    height: 100vh;
+                    overflow: hidden;
+                }
+
+                .background_img {
+                    position: absolute;
+                    justify-self: center;
+                    width: 100vw;
+                    height: 100vh;
+                    object-fit: cover;
+                }
             }
         </style>
     </head>

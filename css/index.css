@@ -190,6 +190,8 @@ body {
         z-index: 2;
 }
 
+@media (min-width: 901px) {
+    
     .intro h1 {
         font-size: 4.4vw;
         margin-top: auto;
@@ -232,6 +234,58 @@ body {
         margin-right: auto;
         animation: arrow_down 2s infinite;
     }
+}
+
+@media (max-width: 900px) {
+    
+    .intro h1 {
+        font-size: 4.4vh;
+        margin-top: 14vh;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        color: rgb(17, 190, 164);
+        text-shadow: rgb(93, 93, 93) 2px 0 10px;
+    }
+    
+    .intro h2 {
+        font-size: 3vh;
+        color: rgb(23, 233, 163);
+        text-shadow: rgb(93, 93, 93) 2px 0 10px;
+    }
+    
+    .intro h3 {
+        margin-top: 5vh;
+        font-size: 2vh;
+        color: rgb(224, 224, 224);
+        letter-spacing: 0.1vw;
+        text-shadow: rgb(75, 75, 75) 2px 0 5px;
+    }
+    
+    .animation_arrow {
+        position: relative;
+        top: 28vh;
+    }
+    
+    .animation_arrow p {
+        position: relative;
+        color: rgba(224, 224, 224, 0.8);
+        font-size: 1.5vh;
+        letter-spacing: 0.3vw;
+        text-shadow: rgb(128, 128, 128) 0px 0 1vw;
+    }
+    
+    .arrow_down {
+        filter: opacity(50%);
+        position: relative;
+        height: 1vh;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        animation: arrow_down 2s infinite;
+    }
+}
+
+
 
     @keyframes arrow_down {
         0% {
@@ -279,7 +333,7 @@ body {
     @media (max-width: 900px) {
 
         .content {
-            width: 90vw;
+            width: 78vw;
             margin-top: 2.56vw;
             display: grid;
             height: fit-content;
