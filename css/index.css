@@ -271,7 +271,7 @@ body {
 
 /*游戏版本选项*/
 
-/* .toppic_bar_container_search_box_button */
+/* .content_gateways */
 
     /* 桌面电脑端 */
     @media (min-width: 601px) {
@@ -287,7 +287,7 @@ body {
     }
     
     /* 手机端 */
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
 
         .content_gateways {
             margin-top: 50px;
@@ -298,20 +298,59 @@ body {
             row-gap: 6vh;
         }
     }    
-    
 
-.content_gateways_card {
-    flex: 1;
-    padding: 15px;
-    width: 18vw;
-    height: 10vh;
-    background-color: #6c6;
-    border-radius: 2vw;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    overflow: hidden;
-}
+/* .content_gateways_card */
+
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+        
+        .content_gateways_card {
+            flex: 1;
+            padding: 0.5859vw;
+            width: 18vw;
+            height: 6.25vw;
+            background-color: #6c6;
+            border-radius: 2vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
+    }
+    
+    /* 平板端 */
+    @media (max-width: 1300px) and (min-width: 901px) {
+
+        .content_gateways_card {
+            flex: 1;
+            padding: 2.859vw;
+            width: 18vw;
+            height: 6.25vw;
+            background-color: #6c6;
+            border-radius: 2vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
+    }
+
+    /* 手机端 */
+    @media (max-width: 900px) {
+        
+        .content_gateways_card {
+            flex: 1;
+            padding: 2.859vw;
+            width: 40vw;
+            height: 6.25vw;
+            background-color: #6c6;
+            border-radius: 2vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
+    }
 
 .content_gateways_card > img {
     flex: 1;
@@ -333,7 +372,7 @@ body {
 /* .content_list */
 
     /* 桌面电脑端 */
-    @media (min-width: 601px) {
+    @media (min-width: 901px) {
         
         .content_list {
             justify-items: center;
@@ -345,7 +384,7 @@ body {
     }
 
     /* 手机端 */
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
 
         .content_list {
             justify-items: center;
@@ -355,40 +394,81 @@ body {
         }
     }
 
-    .content_list > a, .content_gateways > a {
-        text-decoration: none;
+.content_list > a, .content_gateways > a {
+    text-decoration: none;
+}
+
+/* .content_list_card */
+
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+        
+        .content_list_card {
+            padding: 0.58vw;
+            width: 18vw;
+            height: 3.478vw;
+            background-color: #69c;
+            border-radius: 3vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
     }
 
-    .content_list_card {
-        padding: 15px;
-        width: 18vw;
-        height: calc(8vw / 2.3);
-        background-color: #69c;
-        border-radius: 3vw;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        overflow: hidden;
+    /* 平板端 */
+    @media (max-width: 1500px) {
+
+        .content_list_card {
+            padding: 2.58vw;
+            width: 18vw;
+            height: 6.478vw;
+            background-color: #69c;
+            border-radius: 3vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
     }
 
-    .content_list_card > img {
-        flex: 1;
-        object-fit: contain;
-        max-height: 100%;
-        max-width: 100%;
+    @media (max-width: 900px) {
+
+        .content_list_card {
+            padding: 3vw;
+            width: 40vw;
+            height: 6.778vw;
+            background-color: #69c;
+            border-radius: 3vw;
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            overflow: hidden;
+        }
     }
 
-    .content_list_card > h2 {
-        display: flex;
-        justify-content: center;
-        flex: 3;
-        color: #fff;
-    }
 
-    .content > p {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
+
+
+
+.content_list_card > img {
+    flex: 1;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content_list_card > h2 {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    color: #fff;
+}
+
+.content > p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 
 .bottom {
     padding-top: 24px;
