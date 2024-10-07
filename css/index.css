@@ -260,21 +260,42 @@ body {
 
 
 /*正文*/
-.content {
-    width: 80vw;
-    margin-top: 2.56vw;
-    display: grid;
-    height: fit-content;
-    justify-self: center;
-    justify-items: center;
-}
+
+/* .content */
+
+    /* 桌面电脑端 */
+    @media (min-width: 901px) {
+        
+        .content {
+            width: 80vw;
+            margin-top: 2.56vw;
+            display: grid;
+            height: fit-content;
+            justify-self: center;
+            justify-items: center;
+        }
+    }
+    
+    /* 手机端 */
+    @media (max-width: 900px) {
+
+        .content {
+            width: 90vw;
+            margin-top: 2.56vw;
+            display: grid;
+            height: fit-content;
+            justify-self: center;
+            justify-items: center;
+        }
+    }    
+
 
 /*游戏版本选项*/
 
 /* .content_gateways */
 
     /* 桌面电脑端 */
-    @media (min-width: 601px) {
+    @media (min-width: 901px) {
         
         .content_gateways {
             margin-top: 50px;
@@ -341,8 +362,9 @@ body {
         .content_gateways_card {
             flex: 1;
             padding: 2.859vw;
-            width: 40vw;
-            height: 6.25vw;
+            width: auto;
+            min-width: 300px;
+            height: 5.5vh;
             background-color: #6c6;
             border-radius: 2vw;
             display: flex;
@@ -432,12 +454,14 @@ body {
         }
     }
 
+    /* 手机端 */
     @media (max-width: 900px) {
 
         .content_list_card {
-            padding: 3vw;
-            width: 40vw;
-            height: 6.778vw;
+            padding: 2vh;
+            width: auto;
+            min-width: 300px;
+            height: 5.5vh;
             background-color: #69c;
             border-radius: 3vw;
             display: flex;
