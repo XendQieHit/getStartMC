@@ -23,7 +23,7 @@ body {
 /* toppic_bar_container */
 
     /* 桌面电脑端 */
-    @media (orientation: landscape) {
+    @media (min-width: 601px) {
         
         .toppic_bar_container {
             height: 80%;
@@ -33,7 +33,7 @@ body {
         }        
     }
     /* 手机端 */
-    @media (orientation: portrait) {
+    @media (max-width: 600px) {
 
         .toppic_bar_container {
             height: 80%;
@@ -52,7 +52,7 @@ body {
 /* toppic_bar_container_logo */
 
     /* 桌面电脑端 */
-    @media (orientation: landscape) {
+    @media (min-width: 601px) {
         
         .toppic_bar_container_logo {
             position: relative;
@@ -62,7 +62,7 @@ body {
         }    
     }
     /* 手机端 */
-    @media (orientation: portrait) {
+    @media (max-width: 600px) {
 
         .toppic_bar_container_logo {
             position: relative;
@@ -72,16 +72,16 @@ body {
         }    
     }
 
-    .toppic_bar_container_search_box {
-        flex: auto;
-        display: flex;
-        justify-content: flex-end;
-    }
+.toppic_bar_container_search_box {
+    flex: auto;
+    display: flex;
+    justify-content: flex-end;
+}
 
 /* .toppic_bar_container_search_box_bar */
 
     /* 桌面电脑端 */
-    @media (orientation: landscape) {
+    @media (min-width: 601px) {
         
         .toppic_bar_container_search_box_bar {
             display: flex;
@@ -94,7 +94,7 @@ body {
         }    
     }
     /* 手机端 */
-    @media (orientation: portrait) {
+    @media (max-width: 600px) {
 
         .toppic_bar_container_search_box_bar {
             display: flex;
@@ -107,77 +107,131 @@ body {
         }    
     }
 
-    .toppic_bar_container_search_box input {
-        color: aliceblue;
-        flex: auto;
-        position: relative;
-        border: none;
-        background: none;
-        outline: none;
-        float: left;
-        padding: 0;
-        line-height: 28px;
-        left: 18px;
-        max-width: 180px;
-        caret-color: aliceblue;
+/* .toppic_bar_container_search_box_button */
+
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+        
+        .toppic_bar_container_search_box input {
+            color: aliceblue;
+            flex: auto;
+            position: relative;
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            line-height: 28px;
+            left: 18px;
+            max-width: 180px;
+            caret-color: aliceblue;
+        }
+    }
+    /* 手机端 */
+    @media (max-width: 600px) {
+
+        .toppic_bar_container_search_box input {
+            color: aliceblue;
+            flex: auto;
+            position: relative;
+            border: none;
+            background: none;
+            outline: none;
+            float: left;
+            padding: 0;
+            line-height: 28px;
+            left: 18px;
+            max-width: 23vw;
+            caret-color: aliceblue;
+        }
     }
 
-    .toppic_bar_container_search_box input::placeholder {
-        color: aliceblue;
-    }
+.toppic_bar_container_search_box input::placeholder {
+    color: aliceblue;
+}
 
-    .toppic_bar_container_search_box_button {
-        flex: auto;
-        justify-self: flex-end;
-        position: relative;
-        left: 25px;
-        align-self: center;
-        height: 20px;
-        width: auto;
-    }
+/* .toppic_bar_container_search_box_button */
 
-    /* 主页intro */
-    .intro {
-        text-align: center;
-        position: absolute;
-        top: 0vw;
-        left: 5vw;
-        right: 5vw;
-        margin: 18vw 0vw 20vw 0vw;
+        /* 桌面电脑端 */
+        @media (min-width: 601px) {
+            
+            .toppic_bar_container_search_box_button {
+                flex: auto;
+                justify-self: flex-end;
+                position: relative;
+                left: 25px;
+                align-self: center;
+                height: 20px;
+                width: auto;
+            }
+        }
+        /* 手机端 */
+        @media (max-width: 600px) {
+
+            .toppic_bar_container_search_box_button {
+                flex: auto;
+                justify-self: flex-end;
+                align-self: center;
+                height: 16px;
+                width: auto;
+            }
+        }    
+
+
+
+
+/* 主页intro */
+.intro {
+    text-align: center;
+    position: absolute;
+    top: 0vw;
+    left: 5vw;
+    right: 5vw;
+    margin: 17vw 0vw 10vw 0vh;
         z-index: 2;
-    }
+}
 
     .intro h1 {
-        font-size: 75px;
+        font-size: 4.4vw;
         margin-top: auto;
         color: rgb(17, 190, 164);
         text-shadow: rgb(93, 93, 93) 2px 0 10px;
     }
 
     .intro h2 {
-        font-size: 50px;
+        font-size: 3vw;
         color: rgb(23, 233, 163);
         text-shadow: rgb(93, 93, 93) 2px 0 10px;
     }
 
     .intro h3 {
-        font-size: 20px;
+        font-size: 2vw;
         color: rgb(224, 224, 224);
-        letter-spacing: 2px;
+        letter-spacing: 0.1vw;
         text-shadow: rgb(75, 75, 75) 2px 0 5px;
     }
 
     .animation_arrow {
         position: relative;
-        top: 160px;
+        top: 10vw;
     }
 
     .animation_arrow p {
         position: relative;
         color: rgba(224, 224, 224, 0.8);
-        font-size: 16px;
-        letter-spacing: 5px;
-        text-shadow: rgb(128, 128, 128) 0px 0 5px;
+        font-size: 1vw;
+        letter-spacing: 0.3vw;
+        text-shadow: rgb(128, 128, 128) 0px 0 1vw;
+    }
+    
+    .arrow_down {
+        filter: opacity(50%);
+        position: relative;
+        height: 0.8vw;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        animation: arrow_down 2s infinite;
     }
 
     @keyframes arrow_down {
@@ -195,84 +249,110 @@ body {
         }
     }
 
-    .arrow_down {
-        filter: opacity(50%);
-        position: relative;
-        height: 14px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        animation: arrow_down 2s infinite;
+.separation_line {
+    justify-self: center;    
+    margin-top: 1.024vw;
+    margin-bottom: 1.024vw;
+    width: 60vw;
+    height: 1px;
+    background: linear-gradient(to right, #fff, #66666667, #fff);
+}
+
+
+/*正文*/
+.content {
+    width: 80vw;
+    margin-top: 2.56vw;
+    display: grid;
+    height: fit-content;
+    justify-self: center;
+    justify-items: center;
+}
+
+/*游戏版本选项*/
+
+/* .toppic_bar_container_search_box_button */
+
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+        
+        .content_gateways {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            justify-items: center;
+            height: fit-content;
+            display: flex;
+            column-gap: 12vw;
+        }
+    }
+    
+    /* 手机端 */
+    @media (max-width: 600px) {
+
+        .content_gateways {
+            margin-top: 50px;
+            margin-bottom: 50px;
+            justify-items: center;
+            height: fit-content;
+            display: grid;
+            row-gap: 6vh;
+        }
+    }    
+    
+
+.content_gateways_card {
+    flex: 1;
+    padding: 15px;
+    width: 18vw;
+    height: 10vh;
+    background-color: #6c6;
+    border-radius: 2vw;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+.content_gateways_card > img {
+    flex: 1;
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.content_gateways_card > h2 {
+    display: flex;
+    justify-content: center;
+    flex: 3;
+    color: #fff;
+    font-size: 36px;
+}
+
+/*详细选项*/
+
+/* .content_list */
+
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+        
+        .content_list {
+            justify-items: center;
+            height: fit-content;
+            display: grid;
+            grid-template-columns: 32vw 32vw;
+            row-gap: 6vh;
+        }
     }
 
+    /* 手机端 */
+    @media (max-width: 600px) {
 
-
-
-    .separation_line {
-        justify-self: center;    
-        margin-top: 25px;
-        margin-bottom: 25px;
-        width: 60vw;
-        height: 1px;
-        background: linear-gradient(to right, #fff, #66666667, #fff);
-    }
-
-
-    /*正文*/
-    .content {
-        width: 80vw;
-        margin-top: 100px;
-        display: grid;
-        height: fit-content;
-        justify-self: center;
-        justify-items: center;
-    }
-
-    /*游戏版本选项*/
-    .content_gateways {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        justify-items: center;
-        height: fit-content;
-        display: flex;
-        column-gap: 12vw;
-    }
-
-    .content_gateways_card {
-        flex: 1;
-        padding: 15px;
-        width: 18vw;
-        height: 10vh;
-        background-color: #6c6;
-        border-radius: 2vw;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        overflow: hidden;
-    }
-
-    .content_gateways_card > img {
-        flex: 1;
-        object-fit: contain;
-        max-height: 100%;
-        max-width: 100%;
-    }
-
-    .content_gateways_card > h2 {
-        display: flex;
-        justify-content: center;
-        flex: 3;
-        color: #fff;
-        font-size: 36px;
-    }
-
-    /*详细选项*/
-    .content_list {
-        justify-items: center;
-        height: fit-content;
-        display: grid;
-        grid-template-columns: 32vw 32vw;
-        row-gap: 6vh;
+        .content_list {
+            justify-items: center;
+            height: fit-content;
+            display: grid;
+            row-gap: 6vh;
+        }
     }
 
     .content_list > a, .content_gateways > a {
