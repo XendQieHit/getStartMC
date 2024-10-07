@@ -72,21 +72,39 @@ body {
         }    
     }
 
-/*  */
     .toppic_bar_container_search_box {
         flex: auto;
         display: flex;
         justify-content: flex-end;
     }
 
-    .toppic_bar_container_search_box_bar {
-        display: flex;
-        height: 36px;
-        width: 240px;
-        border-radius: 36px;
-        background-color: rgb(42, 116, 130);
-        align-items: center;
-        justify-self: flex-end;
+/* .toppic_bar_container_search_box_bar */
+
+    /* 桌面电脑端 */
+    @media (orientation: landscape) {
+        
+        .toppic_bar_container_search_box_bar {
+            display: flex;
+            height: 36px;
+            width: 240px;
+            border-radius: 36px;
+            background-color: rgb(42, 116, 130);
+            align-items: center;
+            justify-self: flex-end;
+        }    
+    }
+    /* 手机端 */
+    @media (orientation: portrait) {
+
+        .toppic_bar_container_search_box_bar {
+            display: flex;
+            height: 36px;
+            width: 30vw;
+            border-radius: 36px;
+            background-color: rgb(42, 116, 130);
+            align-items: center;
+            justify-self: flex-end;
+        }    
     }
 
     .toppic_bar_container_search_box input {
