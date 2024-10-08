@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(event) {
             const targetId = event.target.getAttribute('data-target');
             const content = document.getElementById(targetId);
-
+            
             if (content) {
                 // 显示内容
                 content.classList.add('open');
