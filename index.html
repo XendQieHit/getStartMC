@@ -47,9 +47,7 @@
             }
         </style>
         <!-- 展开元素后自删除 -->
-        <script>
-            
-        </script>
+        <script src="js/content_folder.js"></script>
     </head>
     <body>
         <div class="toppic_bar">
@@ -98,7 +96,7 @@
             <h2>或直接选择对应部分——</h2>
             <h1>Java版</h1>
             <div class="separation_line"></div>
-            <div class="content_list">
+            <div class="content_list" id="content_list1">
                 <a href="">
                     <div class="content_list_card">
                         <img src="ico/Items/grass_block-128px.png" alt="">
@@ -172,10 +170,14 @@
                     </div>
                 </a>
             </div>
+            <button class="content_list_folder" data-target="content_list1">
+                <p>展开更多</p>
+                <img src="ico/arrow-buttom.png" alt="">
+            </button>
             <div class="separation_line"></div>
             <h1>基岩版</h1>
             <div class="separation_line"></div>
-            <div class="content_list">
+            <div class="content_list" id="content_list2">
                 <a href="">
                     <div class="content_list_card">
                         <img src="ico/Items/barrier-128px.png" alt="">
@@ -201,6 +203,10 @@
                     </div>
                 </a>
             </div>
+            <button class="content_list_folder" data-target="content_list2">
+                <p>展开更多</p>
+                <img src="ico/arrow-buttom.png" alt="">
+            </button>
             <div class="separation_line"></div>
             <h1>什么是Java版和基岩版？两者区别</h1>
             <p> 简单来说</p>
