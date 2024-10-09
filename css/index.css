@@ -457,14 +457,6 @@ body {
             max-height: calc(6vh + 11.324vw);
             transition: max-height 0.5s ease-in-out;
         }
-
-        .content_list.open {
-            justify-items: center;
-            display: grid;
-            grid-template-columns: 32vw 32vw;
-            row-gap: 6vh;
-            max-height: 500vh;
-        }
     }
 
     /* 手机端 */
@@ -479,14 +471,16 @@ body {
             max-height: 11.5vh;
             transition: max-height 0.5s ease-in-out;
         }
-
-        .content_list.open {
-            justify-items: center;
-            max-height: 500vh;
-            display: grid;
-            row-gap: 6vh;
-        }
     }
+
+.content_list.open {
+    max-height: 500vh;
+}
+
+/* 不显示.content_list.open 后的第一个.content_list_folder */
+.content_list.open + .content_list_folder {
+    display: none;
+}
 
 .content_list_folder {
     z-index: 3;
