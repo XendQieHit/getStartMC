@@ -45,14 +45,23 @@
                     object-fit: cover;
                 }
             }
+
+            .top_line {
+                background: linear-gradient(to right, #fff, #66666667, #fff);
+                height: 1px;
+                width: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
         </style>
-        <!-- 展开元素后自删除 -->
-        <script src="js/content_folder.js"></script>
     </head>
     <body>
         <div class="toppic_bar">
             <div class="toppic_bar_container">
-                <a href=""><img src="ico/menu.png" alt="" class="toppic_bar_container_menu"></a>
+                <button class="toppic_bar_menu_button" Attribute="triggered">
+                    <img src="ico/menu.png" alt="" class="toppic_bar_container_menu">
+                </button>
+                <script src="js/menu_bar.js"></script>
                 <a href=""><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
                 <div class="toppic_bar_container_search_box">
                     <div class="toppic_bar_container_search_box_bar">
@@ -62,6 +71,29 @@
                 </div>
             </div>
         </div>
+        <div class="menu_bar" id="menu_bar">
+            <!-- 这些列表的排版还要调一下，今天晚上整个菜单收回就已经燃尽了qwq -->
+            <ul><p>Java版</p>
+                <li><a href="">准备玩Minecraft！</a></li>
+                <li><a href="">部署游戏环境</a></li>
+                <li><a href="">独乐不如众乐</a></li>
+                <li><a href="">深入Minecraft</a></li>
+            </ul>
+            <ul><p>基岩版</p>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+            </ul>
+            <ul><p>杂项</p>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+                <li><a href="">正在建设中</a></li>
+            </ul>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div></div>
          <div class="background_img_container">
             <img src="img/index_intro_bg.jpg" alt="" class="background_img">
         </div>
@@ -71,7 +103,7 @@
             <h3>欢迎来到主页！</h3>
             <div class="animation_arrow">
                 <p>发现新天地</p>
-                <img src="ico/arrow-buttom.png" class="arrow_down"></img>
+                <img src="ico/arrow-buttom.png" class="arrow_down" alt=""></img>
             </div>
         </div>
         <div class="content">
@@ -174,6 +206,8 @@
                 展开更多
                 <img src="ico/arrow-buttom.png" alt="">
             </button>
+            <!-- 展开元素后自删除 -->
+            <script src="js/content_folder.js"></script>
             <div class="separation_line"></div>
             <h1>基岩版</h1>
             <div class="separation_line"></div>

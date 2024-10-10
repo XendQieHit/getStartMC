@@ -42,8 +42,14 @@ body {
 
 
 .toppic_bar_container_menu {
+    z-index: 12;
     height: 20px;
     width: auto;
+}
+
+.toppic_bar_menu_button {
+    background: none;
+    border: none;
 }
 
 /* toppic_bar_container_logo */
@@ -173,7 +179,83 @@ body {
             }
         }    
 
+/* 侧边栏 */
+    
+/* .menu_bar.open */
+    
+    /* 桌面端 */
+    @media (min-width: 601px) {
 
+        .menu_bar {
+            z-index: 4;
+            position: fixed;
+            top: 52px;
+            left: 6vw;
+            width: 30vw;
+            height: 15vw;
+            background-color: #389;
+            display: grid;
+            grid-template-columns: auto auto;
+            border-radius: 5px;
+            /* 动画部分 */
+            transform: translateY(-5%);
+            transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out, opacity 0.2s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
+        }
+        .menu_bar.open {
+            z-index: 4;
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+            margin: 0;
+        }
+    }
+    /* 手机端 */
+    @media (max-width: 600px) {
+        
+        .menu_bar.open {
+            z-index: 4;
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+            margin: 0;
+        }
+        .menu_bar {
+            z-index: 4;
+            position: fixed;
+            top: 49px;
+            width: 100vw;
+            height: 50vh;
+            background-color: #396e82;
+            display: flex;
+            flex-direction: column;
+            transform: translateY(-100%);
+            transition: transform 0.1s ease-in-out, visibility 0.1s ease-in-out, opacity 0.1s ease-in-out;
+            visibility: hidden;
+            opacity: 0;
+        }
+        
+        .menu_bar_bg.open {
+            opacity: 1;
+            visibility: visible;
+            z-index: 3;
+        }
+    }
+    
+
+
+.menu_bar_bg {
+    position: fixed;
+    margin: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+    background-color: #00000099;
+}
 
 
 /* 主页intro */
