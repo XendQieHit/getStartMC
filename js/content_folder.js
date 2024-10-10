@@ -11,15 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (content) {
                 // 显示内容
                 content.classList.add('open');
-
-                // 等待动画结束后再删除按钮
-                content.addEventListener('transitionend', function handler() {
-                    // 删除按钮
-                    event.target.remove();
-
-                    // 移除事件监听器，防止多次触发
-                    content.removeEventListener('transitionend', handler);
-                });
             }
         });
     });
