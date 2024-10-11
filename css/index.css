@@ -45,8 +45,7 @@ li {
         }        
     }
 
-
-.toppic_bar_container_menu {
+.toppic_bar_menu_button > img {
     z-index: 12;
     height: 20px;
     width: auto;
@@ -154,6 +153,40 @@ li {
         }
     }
 
+/* search_result */
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+
+        .search_result {
+            width: 240px;
+            position: absolute;
+            top: 49px;
+            right: 15vw;
+            background: white;
+        }
+    }
+    /* 手机端 */
+    @media (max-width: 600px) {
+
+        .search_result {
+            width: 30vw;
+            position: absolute;
+            top: 49px;
+            right: 8vw;
+            background: white;
+        }
+    }
+
+.search_result > div {
+    padding: 1vw;
+    border: gray solid;
+    border-top: 0px;
+}
+.search_result > div > a {
+    color: black;
+    text-decoration: none;
+}
+
 .toppic_bar_container_search_box input::placeholder {
     color: aliceblue;
 }
@@ -181,7 +214,7 @@ li {
             align-self: center;
             height: 16px;
             width: auto;
-        }    
+        }
         }    
 
 /* 侧边栏 */        
@@ -226,6 +259,7 @@ li {
             opacity: 1;
             margin: 0;
         }    
+
         .menu_bar {
             z-index: 4;
             position: fixed;
@@ -240,8 +274,7 @@ li {
             transition: transform 0.1s ease-in-out, visibility 0.1s ease-in-out, opacity 0.1s ease-in-out;
             visibility: hidden;
             opacity: 0;
-        }    
-        
+
         .menu_bar_bg.open {
             opacity: 1;
             visibility: visible;
@@ -321,8 +354,6 @@ li {
     }
 
 }
-
-
 .menu_bar_bg {
     position: fixed;
     margin: 0;
