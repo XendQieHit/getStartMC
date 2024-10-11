@@ -40,8 +40,7 @@ body {
         }        
     }
 
-
-.toppic_bar_container_menu {
+.toppic_bar_menu_button > img {
     z-index: 12;
     height: 20px;
     width: auto;
@@ -149,6 +148,40 @@ body {
         }
     }
 
+/* search_result */
+    /* 桌面电脑端 */
+    @media (min-width: 601px) {
+
+        .search_result {
+            width: 240px;
+            position: absolute;
+            top: 49px;
+            right: 15vw;
+            background: white;
+        }
+    }
+    /* 手机端 */
+    @media (max-width: 600px) {
+
+        .search_result {
+            width: 30vw;
+            position: absolute;
+            top: 49px;
+            right: 8vw;
+            background: white;
+        }
+    }
+
+.search_result > div {
+    padding: 1vw;
+    border: gray solid;
+    border-top: 0px;
+}
+.search_result > div > a {
+    color: black;
+    text-decoration: none;
+}
+
 .toppic_bar_container_search_box input::placeholder {
     color: aliceblue;
 }
@@ -214,13 +247,6 @@ body {
     /* 手机端 */
     @media (max-width: 600px) {
         
-        .menu_bar.open {
-            z-index: 4;
-            transform: translateY(0);
-            visibility: visible;
-            opacity: 1;
-            margin: 0;
-        }
         .menu_bar {
             z-index: 4;
             position: fixed;
@@ -235,16 +261,20 @@ body {
             visibility: hidden;
             opacity: 0;
         }
-        
-        .menu_bar_bg.open {
+        .menu_bar.open {
+            z-index: 4;
+            transform: translateY(0);
+            visibility: visible;
+            opacity: 1;
+            margin: 0;
+        }
+        .menu_bar.open + .menu_bar_bg {
             opacity: 1;
             visibility: visible;
             z-index: 3;
         }
     }
     
-
-
 .menu_bar_bg {
     position: fixed;
     margin: 0;
