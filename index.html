@@ -56,20 +56,22 @@
         </style>
     </head>
     <body>
+        <script src="js/content_folder.js"></script>
+
         <div class="toppic_bar">
             <div class="toppic_bar_container">
-                <button class="toppic_bar_menu_button" Attribute="triggered">
-                    <img src="ico/menu.png" alt="" class="toppic_bar_container_menu">
+                <button class="toppic_bar_menu_button">
+                    <img src="ico/menu.png" alt="" data-target="menu_bar">
                 </button>
-                <script src="js/menu_bar.js"></script>
                 <a href=""><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
                 <div class="toppic_bar_container_search_box">
                     <div class="toppic_bar_container_search_box_bar">
-                        <input type="text" name="search_box" placeholder="搜索词条...">
+                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
                         <a href=""><img src="ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
                     </div>
                 </div>
             </div>
+            <div class="search_result" id="search_result"></div>
         </div>
         <div class="menu_bar" id="menu_bar">
             <!-- 这些列表的排版还要调一下，今天晚上整个菜单收回就已经燃尽了qwq -->
@@ -207,7 +209,6 @@
                 <img src="ico/arrow-buttom.png" alt="">
             </button>
             <!-- 展开元素后自删除 -->
-            <script src="js/content_folder.js"></script>
             <div class="separation_line"></div>
             <h1>基岩版</h1>
             <div class="separation_line"></div>
