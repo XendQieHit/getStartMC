@@ -154,6 +154,7 @@ li {
     }
 
 /* search_result */
+
     /* 桌面电脑端 */
     @media (min-width: 601px) {
 
@@ -215,12 +216,12 @@ li {
             height: 16px;
             width: auto;
         }
-        }    
+    }
 
-/* 侧边栏 */        
-    
+/* 侧边栏 */
+
 /* .menu_bar.open */
-    
+
     /* 桌面端 */
     @media (min-width: 601px) {
 
@@ -247,8 +248,8 @@ li {
             visibility: visible;
             opacity: 1;
             margin: 0;
-        }    
-    }    
+        }
+    }
     /* 手机端 */
     @media (max-width: 600px) {
         
@@ -258,8 +259,7 @@ li {
             visibility: visible;
             opacity: 1;
             margin: 0;
-        }    
-
+        }
         .menu_bar {
             z-index: 4;
             position: fixed;
@@ -274,19 +274,19 @@ li {
             transition: transform 0.1s ease-in-out, visibility 0.1s ease-in-out, opacity 0.1s ease-in-out;
             visibility: hidden;
             opacity: 0;
-
-        .menu_bar_bg.open {
+        }
+        .menu_bar.open + .menu_bar_bg {
             opacity: 1;
             visibility: visible;
             z-index: 3;
-        }    
-    }    
-    
+        }
+    }
+
 .menu_bar_content {
     height: fit-content;
     width: fit-content;
     justify-self: center;
-}    
+}
 
 @media (min-width: 601px) {
     
