@@ -1,0 +1,34 @@
+{
+    "menu_bar_content": {
+        "menu_bar_content_top": [
+            {
+                "title": "Java版",
+                "items": [
+                    { "text": "准备玩Minecraft！", "href": "" },
+                    { "text": "部署游戏环境", "href": "" },
+                    { "text": "独乐不如众乐", "href": "" },
+                    { "text": "深入Minecraft", "href": "" }
+                ]
+            },
+            {
+                "type": "divider"
+            },
+            {
+                "title": "基岩版",
+                "items": [
+                    { "text": "正在建设中", "href": "" },
+                    { "text": "正在建设中", "href": "" },
+                    { "text": "正在建设中", "href": "" },
+                    { "text": "正在建设中", "href": "" }
+                ]
+            }
+        ],
+        "menu_bar_content_bottom": [
+            { "text": "杂项", "href": "" },
+            { "text": "正在建设中", "href": "" },
+            { "text": "正在建设中", "href": "" },
+            { "text": "正在建设中", "href": "" },
+            { "text": "正在建设中", "href": "" }
+        ]
+    }
+}
