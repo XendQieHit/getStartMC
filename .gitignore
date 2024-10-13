@@ -1,0 +1,27 @@
+# 忽略server.js文件
+server.js
+server.bat
+package.json
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略所有 .log 文件
+*.log
+
+# 忽略所有 .env 文件
+.env
+
+# 忽略所有临时文件
+*.tmp
+
+# 忽略所有编译输出
+dist/
+build/
+
+# 忽略 IDE 或编辑器生成的文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
