@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let temp = '<div class="menu_bar_content">';
             temp += '<div class="menu_bar_content_top">';
             for (y in data.menu_bar_content[0]) {
-                if(y !== 0) temp += '<div class="side_line"></div>';
+                if(y > 0) temp += '<div class="side_line"></div>';
                 temp += '<div>';
                 temp += '<a href=""><p>'+data.menu_bar_content[0][y].title+'</p></a>';
                 temp += '<ul>'
