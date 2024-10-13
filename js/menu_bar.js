@@ -11,11 +11,9 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             // 在这里处理数据
             let temp = '<div class="menu_bar_content">';
-            let count = -1;
             temp += '<div class="menu_bar_content_top">';
             for (y in data.menu_bar_content[0]) {
-                count += 1
-                if(count >= 1) temp += '<div class="side_line"></div>';
+                if(y !== 0) temp += '<div class="side_line"></div>';
                 temp += '<div>';
                 temp += '<a href=""><p>'+data.menu_bar_content[0][y].title+'</p></a>';
                 temp += '<ul>'
