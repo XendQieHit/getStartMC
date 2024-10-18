@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     /* 抓取列表数据 */
     async function getMenu() {
-        fetch("./json/menu_list.json")
+        fetch("../../json/menu_list.json")
         .then(response => response.json()) // 将响应转换为 JSON
         .then(data => {
             // 在这里处理数据

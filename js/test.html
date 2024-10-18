@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document URI Example</title>
+</head>
+<body>
+    <h1>Document URI Example</h1>
+    <p id="uri-display"></p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const location = document.documentURI || document.URL;
+            const loc_array = location.split('/');
+            
+            fetch('../docs/folder_name_translate.json')
+            .then(response => response.json())
+            .then(data => {
+                let i = 4;
+                for (let j of data.root) {
+                    if (loc_array[i] === j.path) {
+                        loc_array[i] = j.name;
+
+                        for (let k of j.branches) {
+                            if (loc_array[data.length] === k.path) loc_array = k.name;
+                        }
+                    } else {
+                        loc_array[i] === 'undefined';
+                    }
+                }
+            })
+            .catch(() => function() {
+                console.log('寄啦！');
+            })
+            console.log(loc_array);
+        });
+    </script>
+</body>
+</html>
