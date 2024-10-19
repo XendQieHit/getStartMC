@@ -407,7 +407,7 @@ li {
     border-radius: 15px;
 }
 
-.sidebar_quicklinks {
+.quicklinks {
     position: -webkit-sticky;
     position: sticky;
     top: 0;

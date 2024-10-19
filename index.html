@@ -56,16 +56,16 @@
         </style>
     </head>
     <body>
-        <script src="js/content_folder.js"></script>
-        <script src="js/menu_bar.js"></script>
-        <script src="js/search.js"></script>
+        <script type="module" src="js/content_folder.js"></script>
+        <script type="module" src="js/menu_bar.js"></script>
+        <script type="module" src="js/search.js"></script>
 
         <div class="toppic_bar">
             <div class="toppic_bar_container">
-                <button class="toppic_bar_menu_button">
+                <button class="toppic_bar_menu_button" aria-label="打开菜单">
                     <img src="ico/menu.png" alt="" data-target="menu_bar">
                 </button>
-                <a href="localhost:3000"><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                <a href="index.html"><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
                 <div class="toppic_bar_container_search_box">
                     <div class="toppic_bar_container_search_box_bar">
                         <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">

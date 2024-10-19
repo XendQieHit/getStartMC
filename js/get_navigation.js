@@ -1,27 +1,8 @@
+import {relocateRoot} from './relocate_root.mjs'; //使json文件其实路径重定向至根目录
+
 document.addEventListener('DOMContentLoaded', function() {
 
-    /* 
-        获取json文件绝对路径
-    */
-
-    // 获取运行时的绝对路径根目录
-    const running_path = document.documentURI;
-    let path_array = running_path.split('/');
-    for (let i = path_array.length - 1; path_array[i] !== 'docs' && i >= 0; i--) {
-        path_array.pop();
-    }
-    path_array.pop();
-    
-    let path = '';
-
-    for (let i = 0; i <= path_array.length - 1; i++) {
-        path += path_array[i] + '/'
-    }
-
-    // 在这里输入你要调用的json文件的路径
-    path += 'json/menu_list.json';
-
-    /* 代码正式部分 */
+    const path = relocateRoot('json/translate_folder_name.json');
 
     const location = document.documentURI || document.URL;
     let loc_array = location.split('/');
@@ -31,10 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let loc_array_translated = [];
     let loc_array_buffer = [];
 
-
-    fetch('../../../docs/folder_name_translate.json')
+    // 获取json文件
+    fetch(path)
     .then(response => response.json())
     .then(data => {
+
+        // 开始检索html所在的路径并进行处理
         for (let j of data.root) {
             if (loc_array[i-1] === j.path) {
                 loc_array_translated.push(j.name);
@@ -68,5 +51,5 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.appendChild(nav_element);
         }
     })
-    .catch(console.log('寄啦！JSON路径又炸了！'));
+    .catch(() => {console.log('寄啦！JSON路径又炸了！')});
 });
