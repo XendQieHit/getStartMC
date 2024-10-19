@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const path = relocateRoot('json/translate_folder_name.json');
 
-    const location = document.documentURI || document.URL;
-    let loc_array = location.split('/');
+    let loc_array = document.documentURI || document.URL;
+    loc_array = loc_array.split('/');
     loc_array.pop();
     
     let i = loc_array.length - 1;

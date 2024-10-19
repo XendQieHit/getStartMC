@@ -30,7 +30,7 @@ li {
         
         .toppic_bar_container {
             height: 80%;
-            width: 74%;
+            width: 80%;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -327,7 +327,7 @@ li {
     
     .toppic_bar_navigation_content {
         margin: auto;
-        width: 74%;
+        width: 80%;
         height: 80%;
     }
 }
@@ -336,7 +336,7 @@ li {
     
     .toppic_bar_navigation_content {
         margin: auto;
-        width: 74%;
+        width: 80%;
         height: 80%;
     }
 }
@@ -359,11 +359,10 @@ li {
         position: relative;
         top: 150px;
         margin: 0 auto 200px auto;
-        padding: 0 120px 0 120px;
-        width: auto;
+        width: 80%;
         display: grid;
         column-gap: 20px;
-        grid-template-columns: minmax(0,1fr) minmax(0,2.5fr) minmax(0,15rem);
+        grid-template-columns: minmax(0,0.8fr) minmax(0,2fr) minmax(0,15rem);
     }
 }
 
@@ -400,18 +399,68 @@ li {
     position: sticky;
     top: 114px;
     margin: 0;
-    height: 40vh;
+    height: fit-content;
     width: 220px;
     background-color: #fafbfc;
-    padding: 15px;
-    border-radius: 15px;
+    padding: 30px;
+    border-radius: 30px;
 }
 
-.quicklinks {
+.sidebar_quicklinks {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
 }
+
+
+.ql_section > a {
+    text-decoration: none;
+    font-size: x-large;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.1s;
+}
+
+.ql_section > a:hover {
+    color: #000;
+    transition: color 0.1s;
+}
+
+.ql_section > a > h5 {
+    margin: 0 0 15px 0;
+}
+
+
+.ql_details {
+    margin: 15px 0 5px 0;
+}
+
+.ql_details > summary {
+    color: #333;
+    transition: color 0.1s;
+}
+
+.ql_details > summary:hover {
+    color: #000;
+    transition: color 0.1s;
+}
+
+.ql_details > ol {
+    padding-left: .75rem;
+}
+
+.ql_details > ol li a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.1s;
+}
+
+.ql_details > ol li a:hover {
+    text-decoration: none;
+    color: #000;
+    transition: color 0.1s;
+}
+
 
 .content_md {
     background-color: #fafbfc;

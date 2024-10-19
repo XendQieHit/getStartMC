@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // 读取 md文档 元素
     const paraContent = document.querySelector('.content_md');
-    const parah1_All = paraContent.getElementsByTagName('h1');
+    const parah1_All = paraContent.querySelectorAll('h1','h2');
+
+    console.log(parah1_All);
     
     // 选择快捷目录主体
     const para = document.querySelector('.content_pg');
@@ -24,9 +26,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const parah1 = parah1_All[i].textContent;
         parah1_All[i].id = parah1;
-        const h1 = (i == 0) ? document.createElement('h2') : document.createElement('a');
+        const h1 = document.createElement('a');
         h1.textContent = parah1;
         h1.href = window.location.pathname + '#' + parah1;
+
+        const parah2_All = document.querySelectorAll('h2');
+        for (let j in parah2_All) {
+
+        }
 
         paraList.appendChild(h1);
     }
