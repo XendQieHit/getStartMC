@@ -1,48 +1,28 @@
-/* 不能直接调用该文件！ */
-/* 该文件只是一个通用模板！ */
-/* 要使用此脚本，请将该代码插入本体html文件中，以此避免fetch方法的路径捕获发生错误。 */
-
-// 主目录
-
 document.addEventListener('DOMContentLoaded', function() {
-    const location = document.documentURI || document.URL;
-    let loc_array = location.split('/');
-    loc_array.pop();
+
+    /* 
+        获取json文件绝对路径
+    */
+
+    // 获取运行时的绝对路径根目录
+    const running_path = document.documentURI;
+    let path_array = running_path.split('/');
+    for (let i = path_array.length - 1; path_array[i] !== 'docs' && i >= 0; i--) {
+        path_array.pop();
+    }
+    path_array.pop();
     
-    let i = loc_array.length - 1;
-    let loc_array_translated;
-    let loc_array_buffer;
+    let path = '';
 
-    fetch('../../docs/folder_name_translate.json')
-    .then(response => response.json())
-    .then(data => {
-        for (let j of data.root) {
-            if (loc_array[i] === j.path) {
-                loc_array_translated = j.name;
-                loc_array_buffer = loc_array.pop();
-            }
-        }
+    for (let i = 0; i <= path_array.length - 1; i++) {
+        path += path_array[i] + '/'
+    }
 
-        const nav = document.querySelector('.toppic_bar_navigation_content');
+    // 在这里输入你要调用的json文件的路径
+    path += 'json/menu_list.json';
 
-        const nav_element = document.createElement('a');
-        nav_element.textContent = ' > ' + loc_array_translated;
+    /* 代码正式部分 */
 
-        let nav_quicklink = '';
-        for (let k of loc_array) nav_quicklink += k + '/';
-        
-        nav_quicklink += loc_array_buffer + '/' + loc_array_buffer + '.html';
-
-        nav_element.href = nav_quicklink;
-        nav.appendChild(nav_element);
-
-    })
-    .catch(console.log('寄啦！JSON路径又炸了！'));
-});
-
-// 子条目
-
-document.addEventListener('DOMContentLoaded', function() {
     const location = document.documentURI || document.URL;
     let loc_array = location.split('/');
     loc_array.pop();
