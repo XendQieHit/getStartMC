@@ -498,7 +498,7 @@ li {
 
 .content_pg h1 {
     font-size: x-large;
-    margin: 10px 0 10px 0 ;
+    margin: 10px 0 18px 0 ;
 }
 
 .content_pg_list {
@@ -506,6 +506,19 @@ li {
     flex-direction: column;
     height: fit-content;
     margin-bottom: 15px;
+}
+
+.content_pg_list > ol {
+    padding-left: .75rem;
+    margin: 0 0 18px 0;
+}
+
+.content_pg_list > ol > li {
+    margin: 10px 0 0 .75rem;
+}
+
+.content_pg_list > ol > a + li {
+    margin-top: 12px;
 }
 
 .content_pg_list a {
