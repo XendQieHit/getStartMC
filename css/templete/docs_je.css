@@ -496,6 +496,12 @@ li {
     background-color: #fafbfc;
 }
 
+.highlight {
+    color: #09f;
+    background-color: #9cc;
+    transition: color 0.1s background-color 0.1s;
+}
+
 .content_pg h1 {
     font-size: x-large;
     margin: 10px 0 18px 0 ;
@@ -514,7 +520,7 @@ li {
 }
 
 .content_pg_list > ol > li {
-    margin: 10px 0 0 .75rem;
+    margin: 10px 0 0 2.75rem;
 }
 
 .content_pg_list > ol > a + li {
@@ -533,6 +539,8 @@ li {
     color: #09f;
     transition: color 0.1s;
 }
+
+
 
 .bottom {
     padding-top: 24px;

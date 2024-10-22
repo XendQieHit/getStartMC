@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
+    /*
+        生成快捷目录pg_list
+    */
+
     // 读取 md文档 元素
     const content_md = document.querySelector('.content_md');
 
@@ -33,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const h1 = document.createElement('ol');
 
             const h1_a = document.createElement('a');
+            h1_a.id = parah1;
             h1_a.textContent = parah1;
             h1_a.href = window.location.pathname + '#' + parah1;
             
@@ -49,11 +54,12 @@ document.addEventListener('DOMContentLoaded', function() {
         
                     const h2 = document.createElement('li');
                     const h2_a = document.createElement('a');
+                    h2_a.id = parah2;
         
                     
-                    // const parah2_text = parah2.match(/[^(\d.\s)].*/);
+                    const parah2_text = parah2.match(/[^(\d.\s)].*/);
                     
-                    h2_a.textContent = parah2;
+                    h2_a.textContent = parah2_text;
 
                     h2_a.href = window.location.pathname + '#' + parah2;
                     
@@ -70,4 +76,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
         loc_list++
     }
+
+
+    /*
+        高光功能
+    */
+
+   
+   function highlightSection() {
+
+       const sections = document.querySelector('.content_md').querySelectorAll('section');
+    
+       const pg_list = document.querySelector('.content_pg_list').querySelectorAll('a');
+
+       const scrollPosition = window.scrollY;
+        
+        for (let i = 0; i < sections.length && i < pg_list.length; i++) {
+
+            const rect = sections[i].getBoundingClientRect();
+            const sectionTop = rect.top + window.scrollY;
+            const sectionBottom = sectionTop + sections[i].offsetHeight;
+
+            // 检查当前滚动位置是否在某个section的范围内
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                pg_list[i].classList.add('highlight');
+            } else {
+                pg_list[i].classList.remove('highlight');
+            }
+        };
+    }
+
+    // 监听滚动事件
+    window.addEventListener('scroll', highlightSection);
+
+    // 初始化时调用一次，以防页面加载时某个section已经在视口中
+    highlightSection();
 });
