@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
             section_head_text.textContent = i.title;
 
             section_head.appendChild(section_head_text)
-
-            
-            
             section.appendChild(section_head);
             
             // 遍历生成条目
@@ -54,7 +51,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     a.textContent = k.title;
                     a.href = relocateRoot('') + k.href;
                     
-                    if(current_loc === k.path) a.classList.add('highlight');
+                    if(current_loc === k.path) {
+                        
+                        a.classList.add('highlight');
+                        details.open = true; // 含有highlight标签的子元素的details自展开
+                    }
 
                     li.appendChild(a);
                     section_ol.appendChild(li);

@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
        const pg_list = document.querySelector('.content_pg_list').querySelectorAll('a');
 
-       const scrollPosition = window.scrollY;
+       const scrollPosition = window.scrollY + 120;
         
         for (let i = 0; i < sections.length && i < pg_list.length; i++) {
 

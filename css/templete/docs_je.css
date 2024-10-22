@@ -468,6 +468,10 @@ li {
     border-radius: 50px;
 }
 
+.content_md section {
+    scroll-margin-top: 109px;
+}
+
 .content_md a {
     color: #666;
     transition: color 0.1s;
@@ -497,9 +501,8 @@ li {
 }
 
 .highlight {
-    color: #09f;
-    background-color: #9cc;
-    transition: color 0.1s background-color 0.1s;
+    color: #09f !important;
+    transition: color 0.1s;
 }
 
 .content_pg h1 {
