@@ -26,7 +26,7 @@ li {
         z-index: 5;
         position: fixed;
         top: 0px;
-        height: 94px;
+        height: 89px;
         width: 100%;
         background-color: #389;
     }
@@ -362,23 +362,22 @@ li {
     .toppic_bar_navigation {
         position: relative;
         width: 100%;
-        height: 34px;
+        height: 45px;
         background-color: #e1e2e3;
         padding: 5px 0 5px 0;
         display: flex;
+        align-content: center;
     }
 
     .toppic_bar_navigation_content {
         margin: auto;
         width: 80%;
         height: 80%;
+        display: flex;
     }
 
-    .pg_list_button {
-        z-index: -1;
-        background: none;
-        border: none;
-        visibility: hidden;
+    .nav_list_button {
+        display: none;
     }
     .nav_list_button img {
         visibility: hidden;
