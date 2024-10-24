@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../../ico/favicon.png" type="image/x-icon">
         <title>MC游戏下载 - GetStartMC</title>
         <style></style>
         <script type="module" src="../../../js/get_pg_list.js"></script>
         <script type="module" src="../../../js/menu_bar.js"></script>
         <script type="module" src="../../../js/search.js"></script>
         <script type="module" src="../../../js/get_navigation.js"></script>
-        <script type="module" src="../../../js/get_sidebar_menu.js"></script>
+        <script type="module" src="../../../js/get_ql_menu.js"></script>
         <script type="module" src="../../../js/apart_md_content.js"></script>
     </head>
     <body>
@@ -29,7 +30,10 @@
             </div>
             <div class="search_result" id="search_result"></div>
             <div class="toppic_bar_navigation">
-                <div class="toppic_bar_navigation_content"></div>
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
             </div>
         </div>
         <div class="menu_bar" id="menu_bar">
@@ -37,7 +41,7 @@
         </div>
         <div class="menu_bar_bg" id="menu_bar_bg"></div>
         <div class="content">
-            <div class="content_sidebar" id="sidebar_menu">
+            <div class="content_ql" id="ql_menu">
                 <aside class="sidebar_quicklinks">
                     <nav class="sidebar_ql_content"></nav>
                 </aside>

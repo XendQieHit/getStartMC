@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 loc_array_buffer.push(loc_array.pop());
             }
         }
-        const nav = document.querySelector('.toppic_bar_navigation_content');
+        const nav = document.querySelector('.nav_list');
 
         loc_array_buffer.reverse();
 

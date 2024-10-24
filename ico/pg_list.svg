@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.87 6.68">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #555;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="3.66" width="1.15" height="1.15"/>
+  <rect class="cls-1" y="1.8" width="1.15" height="1.15"/>
+  <rect class="cls-1" width="1.15" height="1.15"/>
+  <rect class="cls-1" x="1.9" y="3.91" width="7.97" height=".77"/>
+  <rect class="cls-1" y="5.53" width="1.15" height="1.15"/>
+  <rect class="cls-1" x="1.9" y="5.78" width="5.44" height=".77"/>
+  <rect class="cls-1" x="1.9" y="2.04" width="6.69" height=".77"/>
+  <rect class="cls-1" x="1.9" y=".24" width="7.97" height=".77"/>
+</svg>
