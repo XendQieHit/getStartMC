@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
         /* 检测点击按钮时开关状态 */
         if (triggerButtons.contains(event.target) && !menu_bar.classList.contains('open')) {
             menu_bar.classList.add('open');
+        } else if (menu_bar.contains(event.target)) {
+            return 0;
         } else {
             menu_bar.classList.remove('open');
         }
