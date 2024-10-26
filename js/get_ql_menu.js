@@ -1,7 +1,7 @@
 import { relocateRoot } from "./relocate_root.mjs" // 重定向根目录
 
 document.addEventListener('DOMContentLoaded', function() {
-    const path = relocateRoot('json/translate_sidebar_menu.json');
+    const path = relocateRoot('json/translate_folder_name.json');
 
     let current_path = document.documentURI || document.URL;
     current_path = current_path.split('/');
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const sidebar_ql_content = document.querySelector('.sidebar_ql_content');
         
         // 开始读取目录json文件并进行处理
-        for (let i of json.root) {
+        for (let i of json) {
             
             // 创建头表
             const section = document.createElement('section');
@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const summary = document.createElement('summary');
                 const section_ol = document.createElement('ol');
                 
-                summary.textContent = j.theme;
+                summary.textContent = j.title;
                 
                 // 遍历生成子条目
                 for (let k of j.branches) {
