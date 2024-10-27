@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class="light-mode" data-capo>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../../../ico/favicon.png" type="image/x-icon">
+        <title>MC游戏下载 - GetStartMC</title>
+        <style></style>
+        <script type="module" src="../../../../js/menu_bar.js"></script>
+        <script type="module" src="../../../../js/get_pg_list.js"></script>
+        <script type="module" src="../../../../js/show_ql_menu.js"></script>
+        <script type="module" src="../../../../js/search.js"></script>
+        <script type="module" src="../../../../js/get_navigation.js"></script>
+        <script type="module" src="../../../../js/get_ql_menu.js"></script>
+        <script type="module" src="../../../../js/apart_md_content.js"></script>
+    </head>
+    <body>
+        <div class="toppic_bar">
+            <div class="toppic_bar_container">
+                <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                    <img src="../../../../ico/menu.png" alt="" data-target="menu_bar">
+                </button>
+                <a href="../../../../index.html"><img src="../../../../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                <div class="toppic_bar_container_search_box">
+                    <div class="toppic_bar_container_search_box_bar">
+                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
+                        <a href=""><img src="../../../../ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search_result" id="search_result"></div>
+            <div class="toppic_bar_navigation">
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar" id="menu_bar">
+            <div class="menu_bar_content"></div>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div class="content">
+            <div class="content_ql" id="ql_menu">
+                <aside class="sidebar_quicklinks">
+                    <nav class="sidebar_ql_content"></nav>
+                </aside>
+            </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
+            <div class="content_md">
+                <h1>光影安装</h1>
+                <hr>
+                <p>*此篇教程对玩家的前置条件有所要求，建议看完以下教程后再来阅读该篇教程：<a href="http://localhost:3000/md/je/MOD%E6%A8%A1%E7%BB%84%E3%80%81%E6%95%B4%E5%90%88%E5%8C%85%E5%AE%89%E8%A3%85%208566c9ed12d64e7287a993c85e414398.md">MOD模组安装</a></p>
+                <h1>零、序</h1>
+                <p><strong>MC本身并不支持光影</strong>，光影的加载主要依托于 光影加载器模组 功能的支持。</p>
+                <p>目前主要的光影加载器有四种方案：</p>
+                <table>
+                <thead>
+                <tr>
+                <th>光影加载器模组</th>
+                <th>Sodium + Iris</th>
+                <th>Radium + Oculus</th>
+                <th>Optifine</th>
+                <th>Optifine + OptiFabric</th>
+                </tr>
+                </thead>
+                <tbody><tr>
+                <td>适用版本</td>
+                <td>1.14Fabric ~</td>
+                <td>1.14Forge ~</td>
+                <td>全版本Forge</td>
+                <td>1.14Fabric ~</td>
+                </tr>
+                <tr>
+                <td>备注</td>
+                <td>推荐</td>
+                <td>第一种的Forge移植版</td>
+                <td>高版本不建议装</td>
+                <td>不推荐</td>
+                </tr>
+                </tbody></table>
+                <p>其中，Optifine是维护时间最久，低版本最好的性能优化模组。但因为其闭源的特性，在高版本中经常会与其他模组产生冲突，而导致材质丢失、游戏崩溃，且性能优化效果也已经弱于 Sodium。因此，除非是为了使用只能生效于Optifine的光影，尽量使用 Sodium+Iris 来加载光影</p>
+                <h1>一、安装光影加载器模组</h1>
+                <hr>
+                <h2>1. Sodium+Iris / Radium+Oculus</h2>
+                <p>这里直接按照正常模组的下载方式来获取。在 Mod下载 里搜索 Sodium 和 Iris，选择好对应版本之后即可。</p>
+                <p>Radium 和 Oculus 的下载方式同上。</p>
+                <p>其中，Sodium  是 Iris 的前置模组，Radium 是 Oculus 的前置模组。</p>
+                <h2>2. Optifine / Optifine + OptiFabric</h2>
+                <p>Optifine的安装可以在下载安装游戏版本时一起下载。</p>
+                <p>在下载游戏版本的 安装预览 界面里，选择 Optifine即可。启动器会判断你安装的模组加载器类型，自行匹配选择对应的Optifine下载方案。</p>
+                <p>另外，我们也可以不安装模组加载器，在 安装预览 界面里只选择Optifine，这样就会下载Optifine的客户端版本。</p>
+                <p><img src="./shaderpack_files/GIF_2024-9-21_11-45-25.gif" alt="GIF 2024-9-21 11-45-25.gif"></p>
+                <p>同样，Optifine 和 OptiFabric 也可以在 Mod下载 里单独下载。</p>
+                <h1>二、导入光影包</h1>
+                <hr>
+                <p>光影包的导入方法和 <a href="../import_resource/">资源包的导入</a> 方式一样，将光影包放在 shaderpacks 文件夹里即可。</p>
+                <hr>
+                <p>仍有不理解的地方或问题？在文章的相应位置评论留言↑↑↑</p>
+                <p>或在<a href="https://github.com/XendQieHit/getStartAboutMC/issues">Github</a>上反馈文章问题。</p>
+            </div>
+            <div class="content_pg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_icon">
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../../../../ico/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../../../../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+            </div>
+            <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
+        </div>
+    </body>
+</html>

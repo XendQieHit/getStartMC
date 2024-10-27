@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class="light-mode" data-capo>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../../../ico/favicon.png" type="image/x-icon">
+        <title>MC游戏下载 - GetStartMC</title>
+        <style></style>
+        <script type="module" src="../../../../js/menu_bar.js"></script>
+        <script type="module" src="../../../../js/get_pg_list.js"></script>
+        <script type="module" src="../../../../js/show_ql_menu.js"></script>
+        <script type="module" src="../../../../js/search.js"></script>
+        <script type="module" src="../../../../js/get_navigation.js"></script>
+        <script type="module" src="../../../../js/get_ql_menu.js"></script>
+        <script type="module" src="../../../../js/apart_md_content.js"></script>
+    </head>
+    <body>
+        <div class="toppic_bar">
+            <div class="toppic_bar_container">
+                <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                    <img src="../../../../ico/menu.png" alt="" data-target="menu_bar">
+                </button>
+                <a href="../../../../index.html"><img src="../../../../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                <div class="toppic_bar_container_search_box">
+                    <div class="toppic_bar_container_search_box_bar">
+                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
+                        <a href=""><img src="../../../../ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search_result" id="search_result"></div>
+            <div class="toppic_bar_navigation">
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar" id="menu_bar">
+            <div class="menu_bar_content"></div>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div class="content">
+            <div class="content_ql" id="ql_menu">
+                <aside class="sidebar_quicklinks">
+                    <nav class="sidebar_ql_content"></nav>
+                </aside>
+            </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
+            <div class="content_md">
+                <h1>皮肤、披风、玩家名更改</h1>
+                <hr>
+                <p><em>Java版的皮肤文件是一个大小**64</em>64**像素的png图片文件，你可以前往<a href="https://namemc.com/">NameMC</a>或是其他皮肤网站上下载由其他玩家制作的皮肤。</p>
+                <p>*披风是由Mojang官方发放给玩家的奖励，通常具有绝版性质。</p>
+                <h1>一、通过启动器更换</h1>
+                <hr>
+                <p>在PCL2启动器登录正版账户之后，将鼠标指针移至玩家头像，点击下方浮现的 衣服 图标，即可更换皮肤和披风。</p>
+                <p>点击下方浮现的 铅笔 图标，即可跳转至Minecraft官网上的玩家名更改的界面。</p>
+                <p><img src="./edit_profile_files/PNG_1.png" alt="QQ截图20240927155518.png"></p>
+                <h1>二、手动更换</h1>
+                <hr>
+                <p>进入<a href="https://www.minecraft.net/">Minecraft官网（https://www.minecraft.net/）</a>，开始会弹出一个 提示前往下载中国版的提示 的页面，点击下方 继续浏览该网站 即可关闭。</p>
+                <p>之后点击左上角的 <strong>账户</strong>，点击 <strong>登录。</strong></p>
+                <p><img src="./edit_profile_files/PNG_2.png" alt="QQ截图20240924140930.png"></p>
+                <p>若有弹出这个窗口，点击 “Stay on Minecraft.net” 这行绿字即可关闭该窗口。接下来就根据网站的引导来登录你的微软账号。</p>
+                <p><img src="./edit_profile_files/PNG_3.png" alt="QQ截图20240927153144.png"></p>
+                <p>登录完后，转到Java版的玩家档案里。</p>
+                <h2>1. 更换皮肤、披风</h2>
+                <p>点击 <strong>更换皮肤</strong>。</p>
+                <p>先选择你的玩家模型。classic 模型的手臂模型会粗一点（4<em>4），即对应 史蒂夫Steve 模型，slim 模型的手臂会更细一点（4</em>3），即对应 艾利克斯Alex 模型。</p>
+                <p>选择完后，点击上次皮肤图片文件。</p>
+                <p>你可以在下面更换你拥有的披风。</p>
+                <h2>2. 更改玩家名</h2>
+                <p>点击 <strong>档案名称</strong>。之后填写你修改后的玩家名即可。</p>
+                <p>另外，玩家名修改有30天的冷却时间，且这30天内，旧的玩家名不能被其他玩家使用。</p>
+                <hr>
+                <p>仍有不理解的地方或问题？在文章的相应位置评论留言↑↑↑</p>
+                <p>或在<a href="https://github.com/XendQieHit/getStartAboutMC/issues">Github</a>上反馈文章问题。</p>
+            </div>
+            <div class="content_pg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_icon">
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../../../../ico/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../../../../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+            </div>
+            <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
+        </div>
+    </body>
+</html>

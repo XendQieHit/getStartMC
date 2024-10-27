@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown to HTML</title>
+</head>
+<body>
+    <textarea id="markdownInput" rows="10" cols="50">
+# Hello, World!
+This is a **Markdown** example.
+- Item 1
+- Item 2
+- Item 3
+    </textarea>
+    <button id="convertButton">Convert to HTML</button>
+    <div id="htmlOutput"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const markdownText = document.getElementById('markdownInput').value;
+            const htmlOutput = marked.parse(markdownText);
+            document.getElementById('htmlOutput').innerHTML = htmlOutput;
+        });
+    </script>
+</body>
+</html>

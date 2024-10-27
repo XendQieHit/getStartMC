@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class="light-mode" data-capo>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../../../ico/favicon.png" type="image/x-icon">
+        <title>MC游戏下载 - GetStartMC</title>
+        <style></style>
+        <script type="module" src="../../../../js/menu_bar.js"></script>
+        <script type="module" src="../../../../js/get_pg_list.js"></script>
+        <script type="module" src="../../../../js/show_ql_menu.js"></script>
+        <script type="module" src="../../../../js/search.js"></script>
+        <script type="module" src="../../../../js/get_navigation.js"></script>
+        <script type="module" src="../../../../js/get_ql_menu.js"></script>
+        <script type="module" src="../../../../js/apart_md_content.js"></script>
+    </head>
+    <body>
+        <div class="toppic_bar">
+            <div class="toppic_bar_container">
+                <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                    <img src="../../../../ico/menu.png" alt="" data-target="menu_bar">
+                </button>
+                <a href="../../../../index.html"><img src="../../../../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                <div class="toppic_bar_container_search_box">
+                    <div class="toppic_bar_container_search_box_bar">
+                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
+                        <a href=""><img src="../../../../ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search_result" id="search_result"></div>
+            <div class="toppic_bar_navigation">
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar" id="menu_bar">
+            <div class="menu_bar_content"></div>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div class="content">
+            <div class="content_ql" id="ql_menu">
+                <aside class="sidebar_quicklinks">
+                    <nav class="sidebar_ql_content"></nav>
+                </aside>
+            </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
+            <div class="content_md">
+                <h1>存档、资源包导入</h1>
+                <hr>
+                <h1>一、存档</h1>
+                <hr>
+                <p>在Minecraft Java版中，存档的存放和读取位置是在 saves 文件夹里的，里面就有对应世界的存档文件夹，一个存档就对应一个文件夹。</p>
+                <p>该存档里必须要有以下文件才能够被游戏识别：</p>
+                <pre><code class="language-bash">- saves
+                |- new_world &lt;-- 这是你的存档
+                    |- data
+                    |- entities
+                    |- poi
+                    |- region
+                    |- level.dat
+                    |- level.dat_old
+                    |- session.lock
+                    |- uid.dat
+                </code></pre>
+                <p>大部分情况下，下载到的存档都是压缩文件，我们将里面的文件解压，放到 saves 文件夹里的 一个空文件夹里。这样游戏就可以读取该存档世界了。（当然如果压缩包内就有一个文件夹，就直接把它拖进来就行了）</p>
+                <p><img src="./import_resource_files/GIF_2024-9-20_16-14-02.gif" alt="GIF 2024-9-20 16-14-02.gif"></p>
+                <h1>二、资源包</h1>
+                <hr>
+                <p>资源包（或称 材质包、纹理包）的存放位置在 resourcepacks 文件夹里，与存档不同的是，资源包正常无需解压，只需将其放至 resourcepacks 文件夹里就可以了。</p>
+                <p><img src="./import_resource_files/GIF_2024-9-21_10-25-56.gif" alt="GIF 2024-9-21 10-25-56.gif"></p>
+                <hr>
+                <p>仍有不理解的地方或问题？在文章的相应位置评论留言↑↑↑</p>
+                <p>或在<a href="https://github.com/XendQieHit/getStartAboutMC/issues">Github</a>上反馈文章问题。</p>
+            </div>
+            <div class="content_pg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_icon">
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../../../../ico/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../../../../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+            </div>
+            <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
+        </div>
+    </body>
+</html>
