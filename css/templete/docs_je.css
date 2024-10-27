@@ -478,10 +478,11 @@ li {
         position: sticky;
         top: 114px;
         margin: 0;
-        padding: 15px;
+        padding: 15px 15px 15px 20px;
         border-radius: 15px;
         height: fit-content;
         width: fit-content;
+        min-width: 80%;
         background-color: #fafbfc;
     }
     
@@ -502,8 +503,12 @@ li {
         margin: 0 0 18px 0;
     }
     
+    .content_pg_list > ol > li.has_chn_number {
+        margin: 10px 0 0 2.5rem;
+    }
+
     .content_pg_list > ol > li {
-        margin: 10px 0 0 2.75rem;
+        margin: 10px 0 0 .75rem;
     }
     
     .content_pg_list > ol > a + li {
@@ -711,6 +716,7 @@ li {
     .content_md {
         position: relative;
         max-width: 85%;
+        min-width: 80%;
         justify-self: start;
         background-color: #fafbfc;
         padding: 50px;

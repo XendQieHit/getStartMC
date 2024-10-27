@@ -2,93 +2,93 @@
     {
         "path":"je",
         "title":"Java版",
-        "href":"/je/",
+        "href":"docs/je/",
         "branches":[
             {
                 "path":"ready_to_play",
-                "title":"准备玩Minecraft！",
-                "href":"/je/ready_to_play/",
+                "title":"准备玩Minecraft!",
+                "href":"docs/je/ready_to_play/",
                 "branches":[
                     {
                         "path":"dl_game",
                         "title":"游戏安装",
-                        "href":"/je/ready_to_play/dl_game/"
+                        "href":"docs/je/ready_to_play/dl_game/"
                     },
                     {
                         "path":"buy_mc",
                         "title":"正版购买与登录",
-                        "href":"/je/ready_to_play/buy_mc/"
+                        "href":"docs/je/ready_to_play/buy_mc/"
                     },
                     {
                         "path":"edit_profile",
                         "title":"皮肤、披风、玩家名更改",
-                        "href":"/je/ready_to_play/edit_profile/"
+                        "href":"docs/je/ready_to_play/edit_profile/"
                     }
                 ]
             },
             {
                 "path":"setup",
                 "title":"部署游戏环境",
-                "href":"/je/setup/",
+                "href":"docs/je/setup/",
                 "branches":[
                     {
                         "path":"mod_setup",
                         "title":"Mod模组、整合包安装",
-                        "href":"/je/mod_setup/"
+                        "href":"docs/je/mod_setup/"
                     },
                     {
                         "path":"shaderpack",
                         "title":"光影安装",
-                        "href":"/je/shaderpack/"
+                        "href":"docs/je/shaderpack/"
                     },
                     {
                         "path":"import_resource",
                         "title":"存档、资源包导入",
-                        "href":"/je/import_resource/"
+                        "href":"docs/je/import_resource/"
                     }
                 ]
             },
             {
                 "path":"multiplay",
                 "title":"独乐不如众乐",
-                "href":"/je/multiplay/",
+                "href":"docs/je/multiplay/",
                 "branches":[
                     {
                         "path":"lan",
                         "title":"多人联机方法",
-                        "href":"/je/lan/"
+                        "href":"docs/je/lan/"
                     },
                     {
                         "path":"join_server",
                         "title":"进入服务器/局域网",
-                        "href":"/je/join_server/"
+                        "href":"docs/je/join_server/"
                     },
                     {
                         "path":"server_setup",
                         "title":"服务器的简单部署",
-                        "href":"/je/server_setup/"
+                        "href":"docs/je/server_setup/"
                     }
                 ]
             },
             {
                 "path":"get_deeper",
                 "title":"深入Minecraft",
-                "href":"/je/get_deeper/",
+                "href":"docs/je/get_deeper/",
                 "branches":[
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     }
                 ]
             }
@@ -97,27 +97,27 @@
     {
         "path":"be",
         "title":"基岩版",
-        "href":"/be/",
+        "href":"docs/be/",
         "branches":[
             {
-                "path":"",
+                "path":"undefined",
                 "title":"正在建设中",
-                "href":"/be/",
+                "href":"docs/be/",
                 "branches":[
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     }
                 ]
             }
@@ -126,27 +126,27 @@
     {
         "path":"additions",
         "title":"杂项",
-        "href":"/additions/",
+        "href":"docs/additions/",
         "branches":[
             {
-                "path":"",
+                "path":"undefined",
                 "title":"正在建设中",
-                "href":"/additions/",
+                "href":"docs/additions/",
                 "branches":[
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     },
                     {
-                        "path":"",
-                        "title":"",
-                        "href":""
+                        "path":"undefined",
+                        "title":"undefined",
+                        "href":"undefined"
                     }
                 ]
             }

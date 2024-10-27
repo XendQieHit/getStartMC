@@ -26,20 +26,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let loc_list = 1;
 
+    let hasCHNNumber = false;
+
     // 逐个读取 md文档中的 子标题 并放入快捷目录列表
     while (loc_list < para_content.length) {
         
         if (para_content[loc_list].matches('h1')) {
-
+            
             const parah1 = para_content[loc_list].textContent;
             para_content[loc_list].id = parah1;
 
+            
             const h1 = document.createElement('ol');
-
+            
             const h1_a = document.createElement('a');
             h1_a.id = parah1;
             h1_a.textContent = parah1;
             h1_a.href = window.location.pathname + '#' + parah1;
+            
+            // 检测h1是否有中文数字序号
+            if (para_content[loc_list].textContent.startsWith("零、")) hasCHNNumber = true;
+            
             
             h1.appendChild(h1_a);
 
@@ -55,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     const h2 = document.createElement('li');
                     const h2_a = document.createElement('a');
                     h2_a.id = parah2;
+
+                    // 有的话就使用另一套css
+                    if (hasCHNNumber) h2.classList += 'has_chn_number';
         
                     
                     const parah2_text = parah2.match(/[^(\d.\s)].*/);

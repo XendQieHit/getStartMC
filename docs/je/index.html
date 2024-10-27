@@ -4,13 +4,16 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../ico/favicon.png" type="image/x-icon">
         <title>MC游戏下载 - GetStartMC</title>
         <style></style>
-        <script type="module" src="../../js/get_pg_list.js"></script>
         <script type="module" src="../../js/menu_bar.js"></script>
+        <script type="module" src="../../js/get_pg_list.js"></script>
+        <script type="module" src="../../js/show_ql_menu.js"></script>
         <script type="module" src="../../js/search.js"></script>
         <script type="module" src="../../js/get_navigation.js"></script>
-        <script type="module" src="../../js/get_sidebar_menu.js"></script>
+        <script type="module" src="../../js/get_ql_menu.js"></script>
+        <script type="module" src="../../js/apart_md_content.js"></script>
     </head>
     <body>
         <div class="toppic_bar">
@@ -28,7 +31,10 @@
             </div>
             <div class="search_result" id="search_result"></div>
             <div class="toppic_bar_navigation">
-                <div class="toppic_bar_navigation_content"></div>
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
             </div>
         </div>
         <div class="menu_bar" id="menu_bar">
@@ -36,12 +42,36 @@
         </div>
         <div class="menu_bar_bg" id="menu_bar_bg"></div>
         <div class="content">
-            <div class="content_sidebar_menu" id="sidebar_menu">
+            <div class="content_ql" id="ql_menu">
                 <aside class="sidebar_quicklinks">
                     <nav class="sidebar_ql_content"></nav>
                 </aside>
             </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
             <div class="content_md">
+                <h1>Java版</h1>
+                <hr>
+                <h1>准备玩Minecraft!</h1>
+                <p><a href="http://localhost:3000/docs/je/ready_to_play/dl_game">MC游戏下载</a></p>
+                <p><a href="http://localhost:3000/docs/mod">MOD模组、整合包安装</a></p>
+                <p><a href="http://localhost:3000/docs/">存档、资源包导入</a></p>
+                <p><a href="http://localhost:3000/docs/">光影安装</a></p>
+                <p><a href="http://localhost:3000/docs/">多人联机方法</a></p>
+                <p><a href="http://localhost:3000/docs/">游玩服务器</a></p>
+                <p><a href="http://localhost:3000/docs/">正版购买与登录（WIP）</a></p>
+                <p><a href="http://localhost:3000/docs/">皮肤、披风、玩家名更改</a></p>
+                <h1>进阶</h1>
+                <p><a href="http://localhost:3000/docs/">服务器简单部署（WIP）</a></p>
+                <p><a href="http://localhost:3000/docs/">转移和修改玩家数据（WIP）</a></p>
+                <p><a href="http://localhost:3000/docs/">实现Java版与基岩版之间跨平台联机（Geyser）（WIP）</a></p>
+                <p><a href="http://localhost:3000/docs/">查看并分析游戏错误报告（WIP）</a></p>
+                <h1>杂项</h1>
+                <p><a href="http://localhost:3000/docs/">迁移中国版存档的注意事项（WIP）</a></p>
+                <p><a href="http://localhost:3000/docs/">手动部署Java环境及其注意事项</a></p>
+                <p><a href="http://localhost:3000/docs/">手动安装模组加载器</a></p>
+                <p><a href="http://localhost:3000/docs/">.minecraft 文件夹里的各类文件夹的用途</a></p>
+                <p><a href="http://localhost:3000/docs/">友情链接</a></p>
+                <p><a href="http://localhost:3000/docs/">语义概念对照与纠正（WIP）</a></p>
             </div>
             <div class="content_pg">
             </div>
