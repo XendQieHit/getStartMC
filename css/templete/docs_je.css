@@ -5,6 +5,10 @@ body {
     margin: 0%;
 }
 
+pre {
+    overflow: scroll;
+}
+
 li {
     list-style-type: none;
     margin: 0 0 10px 0;
@@ -759,6 +763,33 @@ li {
     max-width: 100%;
 }
 
+.content_md li {
+    list-style-type: circle;
+}
+
+.content_md aside {
+    padding: 10px;
+    border-radius: 10px;
+    text-shadow: #555 0.25rem 0.25rem 0.25rem;
+}
+
+.content_md aside * {
+    padding-left: 16px;
+    text-shadow: none;
+}
+
+.content_md aside.warning {
+    background-color: #ffcc3399;
+    
+}
+
+.content_md aside.notice {
+    background-color: #55bbff99;
+}
+
+.content_md aside.error {
+    background-color: #ff333399;
+}
 
 
 .bottom {

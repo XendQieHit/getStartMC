@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class="light-mode" data-capo>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../../../css/templete/docs_je.css">
+        <link rel="shortcut icon" href="../../../../ico/favicon.png" type="image/x-icon">
+        <title>MC游戏下载 - GetStartMC</title>
+        <style></style>
+        <script type="module" src="../../../../js/menu_bar.js"></script>
+        <script type="module" src="../../../../js/get_pg_list.js"></script>
+        <script type="module" src="../../../../js/show_ql_menu.js"></script>
+        <script type="module" src="../../../../js/search.js"></script>
+        <script type="module" src="../../../../js/get_navigation.js"></script>
+        <script type="module" src="../../../../js/get_ql_menu.js"></script>
+        <script type="module" src="../../../../js/apart_md_content.js"></script>
+    </head>
+    <body>
+        <div class="toppic_bar">
+            <div class="toppic_bar_container">
+                <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                    <img src="../../../../ico/menu.png" alt="" data-target="menu_bar">
+                </button>
+                <a href="../../../../index.html"><img src="../../../../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                <div class="toppic_bar_container_search_box">
+                    <div class="toppic_bar_container_search_box_bar">
+                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
+                        <a href=""><img src="../../../../ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="search_result" id="search_result"></div>
+            <div class="toppic_bar_navigation">
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../../../../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar" id="menu_bar">
+            <div class="menu_bar_content"></div>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div class="content">
+            <div class="content_ql" id="ql_menu">
+                <aside class="sidebar_quicklinks">
+                    <nav class="sidebar_ql_content"></nav>
+                </aside>
+            </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
+            <div class="content_md">
+                <h1>多人联机方法</h1>
+                <hr>
+                <p>*此篇教程对玩家的前置条件有所要求，建议看完以下教程后再来阅读该篇教程：<a href="http://localhost:3000/md/je/MOD%E6%A8%A1%E7%BB%84%E3%80%81%E6%95%B4%E5%90%88%E5%8C%85%E5%AE%89%E8%A3%85%208566c9ed12d64e7287a993c85e414398.md">MOD模组安装</a></p>
+                <p>*因图片加载问题，本篇的步骤图文可在每一部分的末尾展开查看</p>
+                <h1>零、序</h1>
+                <hr>
+                <p>mc的多人联机方式主要有两种：服务器 和 局域网联机。本篇主要会围绕 基于<strong>局域网联机</strong>和其他<strong>内网映射</strong>软件（SakuraFrp、Radmin LAN） 来介绍联机方式。</p>
+                <p>SakuraFrp 与 Radmin LAN 各有长处。</p>
+                <ul>
+                <li>SakuraFrp在 网络高峰期 时，联机网络质量可能会波动，<strong>且因为相关政策，房主注册用户时需要1块钱的实名认证费用，并且未满18岁无法使用该软件，<strong>但 <strong>只需要房主自己部署和配置</strong>，其他人就可以</strong>直接</strong>通过 SakuraFrp 提供的 IP地址 进行联机，无需进行额外的步骤。</li>
+                <li>Radmin LAN 的联机是<strong>基于P2P</strong>，因此房主和其他玩家<strong>都需要安装 Radmin LAN</strong>，<strong>其网络稳定性取决于玩家之间的网络质量</strong>。</li>
+                </ul>
+                <p>两种内网穿透软件本篇都会介绍，但选择哪一种方法取决于你的场景需要。</p>
+                <p>BakaXL启动器 也有更为简单直接的 用户联机功能（也是基于P2P），这里就不展开讲解。</p>
+                <p>本篇将会先介绍基本的 进入多人世界 的步骤，之后再是介绍通过 SakuraFrp 和 Radmin LAN。</p>
+                <p>通过 服务器 的多人联机方法 可以在这里找到：<a href="http://localhost:3000/md/je/%E6%B8%B8%E7%8E%A9%E6%9C%8D%E5%8A%A1%E5%99%A8%206785889a6daf48fc9fba8a58022be846.md">服务器的简单部署</a>。</p>
+                <h1>一、联机的基本原理和操作顺序</h1>
+                <hr>
+                <p>想要让玩家与玩家一起游玩，首先就是要建立对应的网络通信，而进行网络通信，就需要对方的 <strong>IP地址</strong>。这就好比是你要去朋友家玩，你就需要知道他家的地址，这里他家的地址就相当于是IP地址。</p>
+                <p>而联机的基本流程就是如下：环境配置（可能）→ <strong>获取IP地址</strong> → 建立网络通信。</p>
+                <p>因此，<strong>获取IP地址</strong> 是最为核心的步骤，只要获得 IP地址，就可以进行联机游玩了。</p>
+                <p>要连接到多人世界，首先要获得你要联机的主机的 IP地址。</p>
+                <p>具体进入多人世界的方法可以看这里：<a href="../join_server/">进入服务器/局域网世界</a></p>
+                <p>原版的局域网联机是默认开启正版验证的，关于关闭正版验证可以在下文找到：<a href="#四、关闭正版验证(可能需要)">四、关闭正版验证(可能需要)</a></p>
+                <h1>二、通过SakuraFrp进行联机</h1>
+                <hr>
+                <p>进入SakuraFrp官网：<a href="https://www.natfrp.com/">https://www.natfrp.com/</a>，点击 注册账号。</p>
+                <img src="./lan_files/PNG_14.png" alt="图 2-1">
+                <p>然后填写注册账号相关的信息。</p>
+                <img src="./lan_files/PNG_4.png" alt="图 2-2">
+                <p>注册完毕并登入成功后就会进入到 OpenID用户界面。</p>
+                <p>点击进入 Sakura Frp。在顶部菜单选择 服务 → 软件下载。</p>
+                <img src="./lan_files/PNG_5.png" alt="图 2-3">
+                <p>然后根据自己的 操作系统 来选择对应的安装包。</p>
+                <img src="./lan_files/UX769R2Q8NAYHABP3X.png" alt="图 2-4">
+                <p>下载完毕后直接跟着安装程序的 默认设置 安装。</p>
+                <p>安装完毕后打开 SakuraFrp，找到 设置 → 账户 → 访问密钥。</p>
+                <img src="./lan_files/PNG_6.png" alt="图 2-5">
+                <p>这里的访问密钥我们需要在官网的个人主页中的  用户 → 用户信息 → 账户信息 里找到 访问密钥，点击复制 即可获取访问密钥。</p>
+                <img src="./lan_files/PNG_8.png" alt="图 2-6">
+                <p>回到SakuraFrp软件里，将刚刚获取到的访问密钥 粘贴过来，点击 登录。</p>
+                <img src="./lan_files/PNG_7.png" alt="图 2-7">
+                <p>目前还不能创建 内网穿透隧道，还需要进行实名认证。在官网的个人主页中找到 用户 → 实名认证 里按照官网给的步骤进行实名认证。<strong>（此过程需要支付1元的认证费用）</strong></p>
+                <img src="./lan_files/PNG_9.png" alt="图 2-8">
+                <p>实名认证完后就能够创建 内网穿透隧道 了。</p>
+                <p>接着打开mc进入世界里，按esc打开游戏菜单，点击 对局域网开放 ，在这里：</p>
+                <ul>
+                <li>如果你游玩的mc版本是 <strong>1.21 以下</strong> 的版本，在你 创建局域网世界 之后，游戏会<strong>随机</strong>分配端口号；</li>
+                <li>如果你游玩的mc版本是 <strong>1.21及 以上</strong> 的版本，可以在这个界面里<strong>自定义</strong>端口号的。</li>
+                </ul>
+                <p>创建局域网世界 之后，开放的端口号会在 游戏聊天框 里用 绿色 标准出来，记住这个端口号。</p>
+                <img src="./lan_files/GIF_2024-9-17_14-55-03.gif" alt="图 2-9">
+                <p>接下来我们就回到SakuraFrp软件里创建隧道。点击左上角的 “+”。</p>
+                <img src="./lan_files/PNG_15.png" alt="图 2-10">
+                <p>根据自身的情况，选择你要映射到的服务主机，然后将隧道类型设置为 <strong>TCP隧道</strong>，本地端口 一栏就填上刚刚获得的端口号，隧道名称随便填，确定设置好后点击右下角的 创建。</p>
+                <img src="./lan_files/PNG_10.png" alt="图 2-11">
+                <p>在隧道列表里可以看到刚刚创建的隧道的话，就说明创建成功了。</p>
+                <p>开启隧道后，在日志里找到：</p>
+                <pre><code class="language-bash">TCP 隧道启动成功
+                使用 &gt;&gt; [你的IP地址] &lt;&lt; 连接你的隧道
+                或使用 IP 地址连接: &gt;&gt; [也是你的IP地址] &lt;&lt;（不建议使用这个）
+                </code></pre>
+                <p>这就是内网映射出去的IP地址，也就是其他玩家进入该世界所要的 IP地址了，复制下来发给你的朋友吧。</p>
+                
+                <h1>三、通过Radmin LAN进行联机</h1>
+                <hr>
+                <p>进入Radmin官网下载软件并安装：<a href="https://www.radmin-lan.cn/">Radmin LAN – 下载免费 LAN 软件 (radmin-lan.cn)</a></p>
+                <p>安装完成之后打开 Radmin LAN，点击 红色开关，等待一段时间，等开关变蓝且显示 在线 后，就成功连接到了 Radmin LAN。</p>
+                <img src="./lan_files/91255848-e7d8-44c2-bcff-32c873ce85dc.png" alt="图 3-1">
+                <h2>1. 房主</h2>
+                <p>如果你是房主，就选择 创建网络，填写并记住 网络名称 和 密码 之后，点击 创建。然后把 网络名称 和 密码 分享给你要邀请的玩家。</p>
+                <p>接着打开mc进入世界里，按esc打开游戏菜单，点击 对局域网开放 ，在这里：</p>
+                <ul>
+                <li>如果你游玩的mc版本是 <strong>1.21 以下</strong> 的版本，在你 创建局域网世界 之后，游戏会<strong>随机</strong>分配端口号；</li>
+                <li>如果你游玩的mc版本是 <strong>1.21及 以上</strong> 的版本，可以在这个界面里<strong>自定义</strong>端口号的。</li>
+                </ul>
+                <p>创建局域网世界 之后，开放的端口号会在 游戏聊天框 里用 绿色 标准出来，记住这个端口号。</p>
+                <img src="./lan_files/GIF_2024-9-17_14-55-03.gif" alt="图 3-2"></p>
+
+                <p>然后你接下来分享给其他玩家的 IP地址就是 开关按钮 旁边的那一串IP + 开放的端口号。</p>
+                <img src="./lan_files/PNG_12.png" alt="图 3-3">
+                <h2>2. 其他玩家</h2>
+                <p>如果你是玩家，就选择 加入网络，填写好房主分享的 网络名称 和 密码 之后，点击 加入。如果下方有出现 同样网络名称的一栏，那么就说明成功进入到网络了。之后就用房主分享的 IP地址 连接到服务器吧。</p>
+                <h1>四、关闭正版验证(可能需要)</h1>
+                <hr>
+                <p>如果非正版的玩家想要进入到局域网世界，就要在开启局域网<strong>之前</strong>，把正版验证关闭。</p>
+                <p>首先 <strong>联机双方</strong> 都要安装一个 自定义局域网联机（Lan Server Properties）的模组，且运行的模组加载器都要相同。关于如何安装模组可以在这里找到：<a href="http://localhost:3000/md/je/MOD%E6%A8%A1%E7%BB%84%E3%80%81%E6%95%B4%E5%90%88%E5%8C%85%E5%AE%89%E8%A3%85%208566c9ed12d64e7287a993c85e414398.md">MOD模组安装</a>。</p>
+                <p>这样就可以在 对局域网开放 里，找到 <strong>在线模式</strong> 的选项，把正版验证给关闭了。</p>
+                <p><img src="./lan_files/GIF_2024-9-17_17-28-35.gif" alt="GIF 2024-9-17 17-28-35.gif"></p>
+                <aside class="warning">
+                ⚠️
+                
+                <p><strong>旧版本</strong>的 自定义局域网联机（Lan Server Properties）模组 并不支持 离线模式+UUID修复。因此，正版玩家进入离线模式的世界时，也会另外创建一份本地玩家档案，<strong>从而造成玩家数据不互通</strong>。所以，如果你的玩家里有 非正版玩家 游玩，那么这个世界最好就一直关闭正版验证游玩。</p>
+                </aside>
+                
+                <p>关于如何转移或修改玩家数据，可以看这个视频：<a href="https://www.bilibili.com/video/BV1qW4y1C7zv/?spm_id_from=333.999.0.0">(教程向/Java)将中国版的存档及玩家数据转到国际版上_哔哩哔哩bilibili_教程</a> <del>夹带私货（</del></p>
+                <hr>
+                <p>仍有不理解的地方或问题？在文章的相应位置评论留言↑↑↑</p>
+                <p>或在<a href="https://github.com/XendQieHit/getStartAboutMC/issues">Github</a>上反馈文章问题。</p>                
+            </div>
+            <div class="content_pg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_icon">
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../../../../ico/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../../../../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+            </div>
+            <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
+        </div>
+    </body>
+</html>

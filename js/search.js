@@ -15,3 +15,26 @@ function search(key){
         document.getElementById('search_result').style.maxHeight = '0vh';
     }
 }
+
+
+function searchN(keys) {
+
+    if (keys.match(/\s/)) {
+
+        keys.split("\s");
+    }
+
+    mainSearch(keys);
+}
+
+function searchFilter(text) {
+
+
+
+}
+
+function mainSearch(key) {
+
+
+
+}
