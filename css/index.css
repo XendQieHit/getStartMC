@@ -4,9 +4,26 @@ body {
     margin: 0%;
 }
 
+pre {
+    overflow: scroll;
+}
+
 li {
     list-style-type: none;
     margin: 0 0 10px 0;
+}
+
+a {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.1s;
+}
+
+a:hover {
+    color: #09f;
+    transition: color 0.1s;
 }
 
 /* 上方条栏 */

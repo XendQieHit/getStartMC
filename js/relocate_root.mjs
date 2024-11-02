@@ -13,6 +13,11 @@ export const relocateRoot = (filePath) => {
     
     path_array = path_array.join('/');
 
+    if (filePath.match(/^\//)) {
+
+        filePath = filePath.match(/(?<=\/).*/);
+    }
+
     path_array += '/' + filePath;
     
     return path_array;
