@@ -1,4 +1,4 @@
-import {relocateRoot} from './relocate_root.mjs'; // 使json文件其实路径重定向至根目录
+import { relocateRoot } from './relocate_root.mjs'; // 使json文件其实路径重定向至根目录
 import { jsonDeeplySearch } from './json_recursive_search.mjs'; // json文件词条检索
 
 document.addEventListener('DOMContentLoaded', function() {

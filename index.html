@@ -55,28 +55,40 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
             }
-        </style>
+            </style>
+            <script>
+                function search_input_onfocus() {
+                    const search_result =document.querySelector('.search_result');
+                    search_result.classList.add('onfocus');
+                }
+                function search_input_onfocusout(){
+                    const search_result =document.querySelector('.search_result');
+                    search_result.classList.remove('onfocus');
+                }
+            </script>
+            <script type="module" src="js/index_content_card.js"></script>
+            <script type="module" src="js/content_folder.js"></script>
+            <script type="module" src="js/menu_bar.js"></script>
+            <script type="module" src="js/search.js"></script>
     </head>
     <body>
-        <script type="module" src="js/index_content_card.js"></script>
-        <script type="module" src="js/content_folder.js"></script>
-        <script type="module" src="js/menu_bar.js"></script>
-        <script type="module" src="js/search.js"></script>
 
         <div class="toppic_bar">
             <div class="toppic_bar_container">
-                <button class="toppic_bar_menu_button" aria-label="打开菜单">
-                    <img src="ico/menu.png" alt="" data-target="menu_bar">
-                </button>
-                <a href="/"><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
-                <div class="toppic_bar_container_search_box">
-                    <div class="toppic_bar_container_search_box_bar">
-                        <input type="text" name="search_box" placeholder="搜索词条..." onfocus="search(this.value)" oninput="search(this.value)" onfocusout="search()">
-                        <a href=""><img src="ico/search.png" alt="" class="toppic_bar_container_search_box_button"></a>
+                <div class="left">
+                    <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                        <img src="ico/menu.png" alt="" data-target="menu_bar">
+                    </button>
+                    <a href="/"><img src="ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                </div>
+                <div class="right">
+                    <div class="search_box">
+                        <input id="search_input" type="text" name="search_box" placeholder="搜索词条..." onfocus="search_input_onfocus()" onfocusout="search_input_onfocusout()">
+                        <a href=""><img src="ico/search.png" alt="" class="search_button"></a>
                     </div>
+                    <ul class="search_result" id="search_result"></ul>
                 </div>
             </div>
-            <div class="search_result" id="search_result"></div>
         </div>
         <div class="menu_bar" id="menu_bar">
         </div>

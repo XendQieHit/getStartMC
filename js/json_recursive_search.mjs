@@ -56,11 +56,13 @@ function jsonRecursiveSearch(json_file, targetItemsName, objectItem, func, ...ot
 
 function jsonDeeplySearch(json_file, targetItemsName, objectItems, func, ...others) {
 
-    objectItems.forEach(objectItem => {
-        
-        jsonRecursiveSearch(json_file, targetItemsName, objectItem, func, ...others);
-    });
+    if (Array.isArray(objectItems)) {
 
+        objectItems.forEach(objectItem => {
+            
+            jsonRecursiveSearch(json_file, targetItemsName, objectItem, func, ...others);
+        });
+    } else { jsonRecursiveSearch(json_file, targetItemsName, objectItems, func, ...others); }
 }
 
 export { jsonDeeplySearch };

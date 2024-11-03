@@ -1,11 +1,11 @@
 [
     {
-        "key_words":[],
-        "href":""
+        "key_words":["je", "java", "Java", "java版", "Java版", "Jvav", "Java Edition", "java edition"],
+        "href":"docs/je/"
     },
     {
-        "key_words":[],
-        "href":""
+        "key_words":["MC游戏下载", "游戏下载", "下载游戏", "download", "dl_game", "Minecraft游戏下载"],
+        "href":"docs/je/ready_to_play/dl_game/"
     },
     {
         "key_words":[],
