@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(json => {
 
         const sidebar_ql_content = document.querySelector('.sidebar_ql_content');
+
+        // 初始化清空
+        sidebar_ql_content.innerHTML = '';
         
         // 开始读取目录json文件并进行处理
         for (let i of json) {

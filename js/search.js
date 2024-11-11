@@ -38,13 +38,12 @@ function search(SearchContent) {
 
                 for (const key_word of Item.key_words) {
 
-                    releavance++;
-
+                    // 检查关键词匹配
                     isPaired = key_word.includes(SearchContent) ? true : false;
-        
+                    
                     if (isPaired) {
-    
-                        console.log('Compaired!')
+                        
+                        releavance++;
     
                         // 在这里添加展示搜索元素 
                         const a = document.createElement('a');
@@ -55,15 +54,19 @@ function search(SearchContent) {
                         
                         function addh3Text(title) {h3.textContent = title;return title}
                         function addpText(text) {p.textContent += '>' + text}
-    
-                        a.href = Item.href;
                         
+                        // 添加链接
+                        let rootURL = relocateRoot('');
+                        rootURL = rootURL.slice(0, rootURL.length);
+                        a.href = rootURL + Item.href;
+
                         // 添加h3内容
                         let title;
                         jsonDeeplySearch(json_tfn, 'href', Item.href, addh3Text, [title, 'title']);
                         // 添加p内容
                         jsonDeeplySearch(json_tfn, 'href', Item.href, addpText, [title, 'title']);
-                    
+                        
+                        // 元素插入
                         div.appendChild(hr);
                         div.appendChild(h3);
                         div.appendChild(p);
@@ -103,8 +106,6 @@ function search(SearchContent) {
 
         SearchContent = SearchContent.split(" ");
 
-        console.log(SearchContent);
-        
         SearchContent.forEach(SearchContent => mainSearch(SearchContent));
 
         // 筛选去除重复结果
@@ -116,9 +117,22 @@ function search(SearchContent) {
 // 监听搜索部分
 const input = document.querySelector('#search_input');
 
-    input.addEventListener("input", () => {
+input.addEventListener("input", () => {
 
     const SearchContent = input.value;
     search(SearchContent);
+});
 
+// 搜索结果的显示和隐藏
+const search_result = document.querySelector('.search_result');
+
+window.addEventListener('click', (event) => {
+
+    if (input.contains(event.target) && !search_result.classList.contains('onfocus')) {
+        search_result.classList.add('onfocus');
+    } else if (search_result.contains(event.target) || input.contains(event.target)) {
+        return;
+    } else {
+        search_result.classList.remove('onfocus');
+    }
 });

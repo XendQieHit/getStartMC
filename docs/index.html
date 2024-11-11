@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-hans" class="light-mode" data-capo>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/templete/docs.css">
+        <link rel="shortcut icon" href="../ico/favicon.png" type="image/x-icon">
+        <title></title>
+        <style></style>
+        <script type="module" src="../js/menu_bar.js"></script>
+        <script type="module" src="../js/show_ql_menu.js"></script>
+        <script type="module" src="../js/search.js"></script>
+        <script type="module" src="../js/get_navigation.js"></script>
+        <script type="module" src="../js/get_ql_menu.js"></script>
+        <script type="module" src="../js/apart_md_content.js"></script>
+        <script type="module" src="../js/load_content_md.js"></script>
+        <script type="module" src="../js/get_pg_list.js"></script>
+        <script type="module" src="../js/gen_docs_title.js"></script>
+    </head>
+    <body>
+        <div class="toppic_bar">
+            <div class="toppic_bar_container">
+                <div class="left">
+                    <button class="toppic_bar_menu_button" aria-label="打开菜单">
+                        <img src="../ico/menu.png" alt="" data-target="menu_bar">
+                    </button>
+                    <a href="/"><img src="../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                </div>
+                <div class="right">
+                    <div class="search_box">
+                        <input id="search_input" type="text" name="search_box" placeholder="搜索词条...">
+                        <a href=""><img src="../ico/search.png" alt="" class="search_button"></a>
+                    </div>
+                    <ul class="search_result" id="search_result"></ul>
+                </div>
+            </div>
+            <div class="search_result" id="search_result"></div>
+            <div class="toppic_bar_navigation">
+                <div class="toppic_bar_navigation_content">
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../ico/pg_list.svg" alt=""></button>
+                    <div class="nav_list"></div>
+                </div>
+            </div>
+        </div>
+        <div class="menu_bar" id="menu_bar">
+            <div class="menu_bar_content"></div>
+        </div>
+        <div class="menu_bar_bg" id="menu_bar_bg"></div>
+        <div class="content">
+            <div class="content_ql" id="ql_menu">
+                <aside class="sidebar_quicklinks">
+                    <nav class="sidebar_ql_content"></nav>
+                </aside>
+            </div>
+            <div class="content_ql_bg" id="content_ql_menu"></div>
+            <div class="content_md">
+            </div>
+            <div class="content_pg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="bottom_icon">
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../ico/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+            </div>
+            <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
+        </div>
+    </body>
+</html>

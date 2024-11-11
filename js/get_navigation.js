@@ -6,12 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const file_path = relocateRoot('json/translate_folder_name.json');
 
     let loc_array = document.documentURI || document.URL;
+
+    if (loc_array.match(/.*(?=#)/)) {
+        loc_array = loc_array.match(/.*(?=#)/);
+        loc_array = loc_array.toString();
+    }
+
     loc_array = loc_array.split('/');
     
     const nav_list = document.querySelector('.nav_list');
-
-
-
 
     // 声明一个添加 a 的方法，方便后面使用
     function addNewA(arr) {
@@ -30,8 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(data => {
 
         let title, href;
-
-        console.log(loc_array);
 
         jsonDeeplySearch(data, "path", loc_array, addNewA, [title, "title"], [href, "href"], nav_list);
 

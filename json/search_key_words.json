@@ -1,50 +1,125 @@
 [
-    {
-        "key_words":["je", "java", "Java", "java版", "Java版", "Jvav", "Java Edition", "java edition"],
-        "href":"docs/je/"
-    },
-    {
-        "key_words":["MC游戏下载", "游戏下载", "下载游戏", "download", "dl_game", "Minecraft游戏下载"],
-        "href":"docs/je/ready_to_play/dl_game/"
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    },
-    {
-        "key_words":[],
-        "href":""
-    }
+  {
+    "href": "docs/?Path=docs/additions/",
+    "key_words": []
+  },
+  {
+    "href": "docs/?Path=docs/be/",
+    "key_words": []
+  },
+  {
+    "href": "docs/?Path=docs/",
+    "key_words": []
+  },
+  {
+    "href": "docs/?Path=docs/je/",
+    "key_words": [
+      "Java版",
+      "准备玩Minecraft!",
+      "游戏环境部署",
+      "独乐不如众乐",
+      "进阶",
+      "杂项"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/multiplay/join_server/",
+    "key_words": [
+      "进入服务器/局域网世界"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/multiplay/lan/",
+    "key_words": [
+      "多人联机方法",
+      "零、序",
+      "一、联机的基本原理和操作顺序",
+      "二、通过SakuraFrp进行联机",
+      "三、通过Radmin LAN进行联机",
+      "四、关闭正版验证(可能需要)",
+      "1. 房主",
+      "2. 其他玩家"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/ready_to_play/buy_mc/",
+    "key_words": [
+      "正版购买与登录（WIP）",
+      "零、序",
+      "一、注册微软账户",
+      "二、购买正版",
+      "三、正版登录"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/ready_to_play/dl_game/",
+    "key_words": [
+      "MC游戏下载",
+      "零、序",
+      "一、主流第三方启动器下载",
+      "二、下载游戏版本文件",
+      "三、启动游戏之前的准备工作",
+      "1. 准备工作",
+      "2. 下载启动器",
+      "1. 分类和定位游戏核心(.minecraft)",
+      "2. 下载游戏版本文件"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/ready_to_play/edit_profile/",
+    "key_words": [
+      "皮肤、披风、玩家名更改",
+      "一、通过启动器更换",
+      "二、手动更换",
+      "1. 更换皮肤、披风",
+      "2. 更改玩家名"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/ready_to_play/",
+    "key_words": [
+      "MC游戏下载",
+      "零、序",
+      "一、主流第三方启动器下载",
+      "二、下载游戏版本文件",
+      "三、启动游戏之前的准备工作",
+      "1. 准备工作",
+      "2. 下载启动器",
+      "1. 分类和定位游戏核心(.minecraft)",
+      "2. 下载游戏版本文件"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/setup/import_resource/",
+    "key_words": [
+      "存档、资源包导入",
+      "一、存档",
+      "二、资源包"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/setup/mod_setup/",
+    "key_words": [
+      "MOD模组、整合包安装",
+      "零、序",
+      "一、安装模组加载器",
+      "二、下载模组",
+      "三、安装整合包",
+      "1. 开启版本隔离（推荐）",
+      "2. 使用启动器自动安装",
+      "1. 通过启动器下载",
+      "2. 手动下载"
+    ]
+  },
+  {
+    "href": "docs/?Path=docs/je/setup/shaderpack/",
+    "key_words": [
+      "光影安装",
+      "零、序",
+      "一、安装光影加载器模组",
+      "二、导入光影包",
+      "1. Sodium+Iris / Radium+Oculus",
+      "2. Optifine / Optifine + OptiFabric"
+    ]
+  }
 ]

@@ -7,7 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css">
         <!--第三方css-->
-        <title>New Web</title>
         <style>
             @media (min-width: 901px) {
                 
@@ -56,23 +55,12 @@
                 margin-bottom: 10px;
             }
             </style>
-            <script>
-                function search_input_onfocus() {
-                    const search_result =document.querySelector('.search_result');
-                    search_result.classList.add('onfocus');
-                }
-                function search_input_onfocusout(){
-                    const search_result =document.querySelector('.search_result');
-                    search_result.classList.remove('onfocus');
-                }
-            </script>
             <script type="module" src="js/index_content_card.js"></script>
             <script type="module" src="js/content_folder.js"></script>
             <script type="module" src="js/menu_bar.js"></script>
             <script type="module" src="js/search.js"></script>
     </head>
     <body>
-
         <div class="toppic_bar">
             <div class="toppic_bar_container">
                 <div class="left">
@@ -83,7 +71,7 @@
                 </div>
                 <div class="right">
                     <div class="search_box">
-                        <input id="search_input" type="text" name="search_box" placeholder="搜索词条..." onfocus="search_input_onfocus()" onfocusout="search_input_onfocusout()">
+                        <input id="search_input" type="text" name="search_box" placeholder="搜索词条...">
                         <a href=""><img src="ico/search.png" alt="" class="search_button"></a>
                     </div>
                     <ul class="search_result" id="search_result"></ul>
