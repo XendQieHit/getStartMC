@@ -1,7 +1,15 @@
+import { loading_animation } from "./loading_animation.mjs";
 import { relocateRoot } from "./relocate_root.mjs";
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    // 加载动画
+    const all_list = document.querySelectorAll('.content_list');
+    all_list.forEach(list => {
+        loading_animation(list);
+    });
+
+    // 主体部分
     const json_path = relocateRoot('json/index_list.json');
 
     fetch(json_path)
@@ -11,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach(content => {
             
             const list = document.querySelector(`#${content.list}`);
+            
+            list.innerHTML = '';
 
             content.cards.forEach(Item => {
                 
