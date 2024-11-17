@@ -656,6 +656,10 @@ a:hover {
     display: none;
 }
 
+.content_list_folder.hidden {
+    visibility: hidden;
+}
+
 .content_list_folder {
     z-index: 3;
     display: flex;
@@ -766,4 +770,26 @@ a:hover {
     justify-content: center;
     align-content: center;
     column-gap: 16px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    border: 5px solid #6cc;
+    border-bottom-color: #cff;
+    border-radius: 50%;
+    -webkit-animation: rotation 1s linear infinite;
+    animation: rotation 1s linear infinite;
+    position: relative;
+    left: calc(50%);
 }

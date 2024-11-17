@@ -1,7 +1,7 @@
-import { relocateRoot } from './relocate_root.mjs'; // 使json文件其实路径重定向至根目录
-import { jsonDeeplySearch } from './json_recursive_search.mjs'; // json文件词条检索
+import { relocateRoot } from '../relocate_root.mjs'; // 使json文件其实路径重定向至根目录
+import { jsonDeeplySearch } from '../json_recursive_search.mjs'; // json文件词条检索
 
-document.addEventListener('DOMContentLoaded', function() {
+function get_navigation() {
 
     const file_path = relocateRoot('json/translate_folder_name.json');
 
@@ -37,4 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
         jsonDeeplySearch(data, "path", loc_array, addNewA, [title, "title"], [href, "href"], nav_list);
 
     })
-});
+}
+export { get_navigation };

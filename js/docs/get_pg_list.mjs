@@ -1,7 +1,6 @@
-const content_pg = document.querySelector('.content_pg');
-
 function get_pg_list() {
-
+    const content_pg = document.querySelector('.content_pg');
+    
     content_pg.innerHTML = ''; // 初始化先清空内容
     
     const content_md = document.querySelector('.content_md');
@@ -129,20 +128,4 @@ function get_pg_list() {
     // 初始化时调用一次，以防页面加载时某个section已经在视口中
     highlightSection();
 }
-
-const observer = new MutationObserver((mutationsList, observer) => {
-    for (let mutation of mutationsList) {
-        get_pg_list();
-    }
-});
-
-// 配置观察选项
-const config = { 
-    childList: true, // 观察子节点的变化（添加、删除）
-    subtree: true,   // 观察所有后代节点的变化
-    attributes: false // 不观察属性变化
-};
-
-const content_md = document.querySelector('.content_md');
-// 开始观察目标节点
-observer.observe(content_md, config);
+export { get_pg_list };

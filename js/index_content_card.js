@@ -46,6 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
 
+        // 显示展开折叠按钮
+        const content_list_folders = document.querySelectorAll('.content_list_folder');
+        content_list_folders.forEach(content_list_folder => {
+            content_list_folder.classList.remove('hidden');
+        });
+
     });
 
 });

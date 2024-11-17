@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style>
+            .content {
+                display: flex;
+                flex-direction: column;
+                margin: auto;
+                justify-content: center;
+                width: 50vw;
+                height: fit-content;
+            }
+            .form {
+                align-items: center;
+                justify-items: center;
+                width: 50vw;
+                height: 50vw;
+                display: grid;
+                grid-template-columns: 24% 24% 24% 24%;
+                grid-template-rows: calc(24% + 0.75rem);
+            }
+            .unit {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-items: center;
+                flex-direction: column;
+                border: black 1px;
+
+            }
+            #imagePreview {
+                width: 90%;
+                height: 90%;
+                border: black 1px;
+            }
+            #imagePreview > img {
+                object-fit: contain;
+                max-height: 100%;
+                max-width: 100%;
+            }
+            h3 {
+                z-index: 10;
+            }
+            #imageUpload {
+                position: relative;
+                top: 40%;
+            }
+            .meme {
+                width: 100%;
+                height: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1>2024年度群友评选</h1>
+            <div class="form">
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最喜欢发史</h3>
+                </div>
+                
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最音游大神</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最管人痴</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最雀魂狗运</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最丐帮之主</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最烧男娘</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最佳原批</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>说话最幽默</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最沉迷mygo</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最二次元</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最怀念的上古群友</h3>
+                </div>
+
+                <div class="unit">
+                    <div id="imagePreview">
+                        <input type="file" id="imageUpload" accept="image/*">
+                    </div>
+                    <h3>最逆天的</h3>
+                </div>
+
+            </div>
+
+            <div class="meme">
+                <h3>你最喜欢的年度本群烂梗</h3>
+                <div class="meme_content">
+                    <input type="file" id="memeUpload" accept="image/*">
+                </div>
+            </div>
+        </div>
+        <script>
+            const units = document.querySelectorAll('#imageUpload');
+            const divs = document.querySelectorAll('#imagePreview');
+            divs.forEach(div => {
+                units.forEach(unit => {                
+                    unit.addEventListener('change', function(event) {
+                        var file = event.target.files[0];
+                        if (file) {
+                            var reader = new FileReader();
+                            reader.onload = function(e) {
+                                var img = document.createElement('img');
+                                img.src = e.target.result;
+                                div.innerHTML = ''; // 清空之前的预览
+                                div.appendChild(img);
+                            };
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                });                
+            });
+            document.querySelector('#memeUpload').addEventListener('change', function(event) {
+                var file = event.target.files[0]
+            })
+        </script>
+    </body>
+</html>

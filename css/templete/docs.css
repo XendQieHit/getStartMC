@@ -90,6 +90,7 @@ li {
 
 .search_result > a {
     color: #eee;
+    text-decoration: none;
 }
 
 .search_result > a > div > h3 {
@@ -793,6 +794,7 @@ li {
     object-fit: contain;
     max-height: 100%;
     max-width: 100%;
+    cursor: pointer;
 }
 
 .content_md li {
@@ -823,6 +825,77 @@ li {
     background-color: #ff333399;
 }
 
+
+.content_img_zoomify {
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.fake_close_button {
+    z-index: 15;
+    position: fixed;
+    height: 35px;
+    width: 35px;
+    top: 7%;
+    right: 7%;
+    border-radius: 100%;
+    background-color: #00000064;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.fake_close_button_x {
+    margin: auto;
+    rotate: 45deg;
+    height: 50%;
+    width: 50%;
+    clip-path: polygon(0% 45%, 45% 45%, 45% 0%, 55% 0%, 55% 45%, 100% 45%, 100% 55%, 55% 55%, 55% 100%, 45% 100%, 45% 55%, 0% 55%);
+    background-color: #e1e2e3e4;
+}
+
+.img_content {
+    z-index: 12;
+    position: relative;
+}
+
+.img_content > img {
+    z-index: 12;
+    position: absolute;
+    /* top的初始默认值是由 zoomify_img.mjs:81 读取图片大小即时设置的  */
+    max-width: 62vw;
+    max-height: 80vh;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.zoom_tool_bar {
+    z-index: 14;
+    position: fixed;
+    top: 85vh;
+    left: 25%;
+    height: 70px;
+    width: 50%;
+    border-radius: 70px;
+    background-color: #00000032;
+    display: flex;
+}
+
+.content_img_zoomify > .img_bg {
+    z-index: 11;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #00000064;
+}
 
 .bottom {
     padding-top: 24px;
@@ -872,4 +945,8 @@ li {
     border-radius: 50%;
     -webkit-animation: rotation 1s linear infinite;
     animation: rotation 1s linear infinite;
+}
+
+.hidden {
+    visibility: hidden;
 }

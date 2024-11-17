@@ -1,9 +1,8 @@
 /* 
-    将md文章段落分块打包
+将md文章段落分块打包
 */
-
-document.addEventListener('DOMContentLoaded', function() {
-
+function apart_md_content(){
+    
     const md = document.querySelector('.content_md').children;
     const md_col = Array.from(md);
     const collection = document.querySelector('.content_md');
@@ -44,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function() {
             collection.appendChild(section_h1);
         }
     }
-});
+}
+export { apart_md_content };

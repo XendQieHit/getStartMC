@@ -1,6 +1,6 @@
-import { relocateRoot } from "./relocate_root.mjs" // 重定向根目录
+import { relocateRoot } from "../relocate_root.mjs" // 重定向根目录
 
-document.addEventListener('DOMContentLoaded', function() {
+function get_ql_menu() {
     const path = relocateRoot('json/translate_folder_name.json');
 
     let current_path = document.documentURI || document.URL;
@@ -76,4 +76,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })
     .catch();
-})
+}
+export { get_ql_menu };
