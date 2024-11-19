@@ -879,12 +879,52 @@ li {
     z-index: 14;
     position: fixed;
     top: 85vh;
-    left: 25%;
+    left: 32.5%;
     height: 70px;
-    width: 50%;
+    width: 25%;
     border-radius: 70px;
-    background-color: #00000032;
+    padding: 0 5% 0 5%;
+    background-color: #aaaaaa48;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .zoom_tool_bar {
+        left: 20%;
+        width: 50%;
+    }
+}
+
+.zoom_tool_bar > button {
+    width: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.zoom_tool_bar > .zoom-out {
+    height: 45%;
+}
+
+.zoom_tool_bar > .zoom-in {
+    height: 60%;
+}
+
+.zoom_tool_bar > .center {
+    height: 50%;
+}
+
+.zoom_tool_bar > .reset {
+    height: 50%;
+}
+
+.zoom_tool_bar > button > img {
+    object-fit: contain;
+    height: 100%;
+    width: auto;
+    opacity: 85%;
 }
 
 .content_img_zoomify > .img_bg {

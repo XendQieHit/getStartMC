@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/templete/docs.css">
-        <link rel="shortcut icon" href="../ico/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="../ico/web/favicon.png" type="image/x-icon">
         <title></title>
         <style></style>
         <script type="module" src="../js/menu_bar.js"></script>
@@ -17,14 +17,14 @@
             <div class="toppic_bar_container">
                 <div class="left">
                     <button class="toppic_bar_menu_button" aria-label="打开菜单">
-                        <img src="../ico/menu.png" alt="" data-target="menu_bar">
+                        <img src="../ico/web/menu.png" alt="" data-target="menu_bar">
                     </button>
-                    <a href="/"><img src="../ico/logo.png" alt="" class="toppic_bar_container_logo"></a>
+                    <a href="/"><img src="../ico/web/logo.png" alt="" class="toppic_bar_container_logo"></a>
                 </div>
                 <div class="right">
                     <div class="search_box">
                         <input id="search_input" type="text" name="search_box" placeholder="搜索词条...">
-                        <a href=""><img src="../ico/search.png" alt="" class="search_button"></a>
+                        <a href=""><img src="../ico/web/search.png" alt="" class="search_button"></a>
                     </div>
                     <ul class="search_result" id="search_result"></ul>
                 </div>
@@ -32,7 +32,7 @@
             <div class="search_result" id="search_result"></div>
             <div class="toppic_bar_navigation">
                 <div class="toppic_bar_navigation_content">
-                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../ico/pg_list.svg" alt=""></button>
+                    <button class="nav_list_button" aria-label="展开导航栏"><img src="../ico/web/pg_list.svg" alt=""></button>
                     <div class="nav_list"></div>
                 </div>
             </div>
@@ -55,7 +55,67 @@
                     <div class="fake_close_button_x"></div>
                 </div>
                 <div class="img_content"></div>
-                <div class="zoom_tool_bar"></div>
+                <div class="zoom_tool_bar">
+                    <button class="zoom-in" aria-label="zoom-in"><img src="../ico/web/zoom-in.svg" alt="" onclick="zoomIn()"></button>
+                    <button class="center" aria-label="center"><img src="../ico/web/center.svg" alt="" onclick="center()"></button>
+                    <button class="reset" aria-label="reset"><img src="../ico/web/reset.svg" alt="" onclick="reset();"></button>
+                    <button class="zoom-out" aria-label="zoom-out"><img src="../ico/web/zoom-out.svg" alt="" onclick="zoomOut()"></button>
+                </div>
+                <script>
+                    function zoomIn() {
+                        zoomCalc(1.1);
+                    }
+                    function zoomOut() {
+                        zoomCalc(0.9);
+                    }
+                    function zoomCalc(scale) {
+
+                        const display_img = document.querySelector('.display_img');
+
+                        let offsetX = display_img.clientWidth / 2;
+                        let offsetY = display_img.clientHeight / 2;
+                        
+                        // 调尺寸
+                        let di_height = display_img.clientHeight * scale;
+                        let di_width = display_img.clientWidth * scale;
+
+                        display_img.style.height = `${di_height}px`;
+                        display_img.style.width = `${di_width}px`;
+                        display_img.style.maxHeight = `${di_height}px`;
+                        display_img.style.maxWidth = `${di_width}px`;
+
+                        // 调整图片位置
+                        // 获取目前的坐标
+                        let di_top = display_img.style.top.match(/.*(?=px)/);
+                        let di_left = display_img.style.left.match(/.*(?=px)/);
+                        di_top = +di_top;
+                        di_left = +di_left;
+
+                        // 将图片位置调整到鼠标焦点位置
+                        display_img.style.top = `${di_top - (scale - 1) * offsetY}px`;
+                        display_img.style.left = `${di_left - (scale - 1) * offsetX}px`;
+                    }
+                    function center() {
+
+                        const display_img = document.querySelector('.display_img');
+
+                        // 调整图片位置
+                        // 将图片位置调整到鼠标焦点位置
+                        display_img.style.top = `${(window.innerHeight - display_img.clientHeight) / 2}px`;
+                        display_img.style.left = `${(window.innerWidth - display_img.clientWidth) / 2}px`;
+                    }
+                    function reset() {
+
+                        const display_img = document.querySelector('.display_img');
+                        
+                        display_img.style.maxWidth = '62vw';
+                        display_img.style.maxHeight = '80vh';
+                        display_img.style.height = null;
+                        display_img.style.width = null;
+
+                        center();
+                    }
+                </script>
                 <div class="img_bg"></div>
             </div>
             <div class="content_pg">
@@ -63,8 +123,8 @@
         </div>
         <footer class="bottom">
             <div class="bottom_icon">
-                <a href="https://github.com/XendQieHit/getStartMC"><img src="../ico/github.svg" alt=""></a>
-                <a href="https://space.bilibili.com/182775460"><img src="../ico/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
+                <a href="https://github.com/XendQieHit/getStartMC"><img src="../ico/web/github.svg" alt=""></a>
+                <a href="https://space.bilibili.com/182775460"><img src="../ico/web/bilibili.ico" alt="" style="filter: brightness(0%) invert(100%);"></a>
             </div>
             <p>部分MC物品图片由<a href="https://www.mcmod.cn/class/6074.html"> [IconR]图标渲染 </a>模组提供</p>
         </div>

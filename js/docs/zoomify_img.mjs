@@ -43,12 +43,6 @@ function main() {
             // 阻止默认滚动行为
             e.preventDefault();
 
-            // 先记录旧的高度和宽度
-            let old_di_height = display_img.style.height.match(/.*(?=px)/);
-            let old_di_width = display_img.style.width.match(/.*(?=px)/);
-            old_di_height = +old_di_height; // 将字符串转化为数字
-            old_di_width = +old_di_width;
-
             // 计算新的高度和宽度
             const scale = 1 + (e.deltaY > 0 ? -0.1 : 0.1);
 
@@ -78,6 +72,7 @@ function main() {
             e.preventDefault();
             if (!wheelTimeout) {
                 wheelTimeout = requestAnimationFrame(() => {
+                    display_img.onload();
                     onWheel(e);
                     wheelTimeout = null;
                 });
@@ -87,7 +82,6 @@ function main() {
         // 监听滚轮事件
         display_img.addEventListener('wheel', throttledOnWheel);
     }
-
 
 /* 开始 文档图片读取和处理 */
     

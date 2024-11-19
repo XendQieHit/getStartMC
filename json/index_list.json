@@ -5,52 +5,52 @@
             {
                 "text":"MC游戏下载",
                 "href":"./docs/?Path=docs/je/ready_to_play/dl_game/",
-                "icon":"./ico/Items/grass_block-128px.png"
+                "icon":"./ico/minecraft/Items/grass_block-128px.png"
             },
             {
                 "text":"MOD模组、整合包安装",
                 "href":"./docs/?Path=docs/je/setup/mod_setup/",
-                "icon":"./ico/Items/chest-128px.png"
+                "icon":"./ico/minecraft/Items/chest-128px.png"
             },
             {
                 "text":"多人联机方法",
                 "href":"./docs/?Path=docs/je/multiplay/lan",
-                "icon":"./ico/gui/pinging.gif"
+                "icon":"./ico/minecraft/gui/pinging.gif"
             },
             {
                 "text":"正版购买与登录",
                 "href":"./docs/?Path=docs/je/ready_to_play/buy_mc",
-                "icon":"./ico/Items/emerald-128px.png"
+                "icon":"./ico/minecraft/Items/emerald-128px.png"
             },
             {
                 "text":"存档、资源包导入",
                 "href":"./docs/?Path=docs/je/setup/import_resource/",
-                "icon":"./ico/Items/chest-128px.png"
+                "icon":"./ico/minecraft/Items/chest-128px.png"
             },
             {
                 "text":"光影安装",
                 "href":"./docs/?Path=docs/je/setup/shaderpack",
-                "icon":"./ico/Items/lantern-128px.png"
+                "icon":"./ico/minecraft/Items/lantern-128px.png"
             },
             {
                 "text":"服务器的简单部署",
                 "href":"./docs/?Path=docs/je/multiplay/setup_server",
-                "icon":"./ico/Items/redstone-128px.png"
+                "icon":"./ico/minecraft/Items/redstone-128px.png"
             },
             {
                 "text":"皮肤、披风、玩家名更改",
                 "href":"./docs/?Path=docs/je/ready_to_play/edit_profile",
-                "icon":"./ico/Items/leather_chestplate-128px.png"
+                "icon":"./ico/minecraft/Items/leather_chestplate-128px.png"
             },
             {
                 "text":"转移和修改玩家数据",
                 "href":"./docs/?Path=docs/je/toolkits/",
-                "icon":"./ico/Items/player_head-128px.png"
+                "icon":"./ico/minecraft/Items/player_head-128px.png"
             },
             {
                 "text":"手动部署Java环境及其注意事项",
                 "href":"./docs/?Path=docs/je/toolkits/",
-                "icon":"./ico/Items/cookie-128px.png",
+                "icon":"./ico/minecraft/Items/cookie-128px.png",
                 "title":"不建议手动安装，可直接在各大启动器直接安装"
             }
         ]
@@ -61,22 +61,22 @@
             {
                 "text":"正在建设中",
                 "href":"./docs/?Path=docs/be/",
-                "icon":"./ico/Items/barrier-128px.png"
+                "icon":"./ico/minecraft/Items/barrier-128px.png"
             },
             {
                 "text":"正在建设中",
                 "href":"./docs/?Path=docs/be/",
-                "icon":"./ico/Items/barrier-128px.png"
+                "icon":"./ico/minecraft/Items/barrier-128px.png"
             },
             {
                 "text":"正在建设中",
                 "href":"./docs/?Path=docs/be/",
-                "icon":"./ico/Items/barrier-128px.png"
+                "icon":"./ico/minecraft/Items/barrier-128px.png"
             },
             {
                 "text":"正在建设中",
                 "href":"./docs/?Path=docs/be/",
-                "icon":"./ico/Items/barrier-128px.png"
+                "icon":"./ico/minecraft/Items/barrier-128px.png"
             }
         ]
     }
