@@ -7,14 +7,15 @@ function main() {
 
         let offsetX, offsetY;
 
-        const onMouseMove = (e) => {
+        const onMove = (e) => {
             e.preventDefault();
             display_img.style.left = (e.clientX - offsetX) + 'px';
             display_img.style.top = (e.clientY - offsetY) + 'px';
         };
 
+        // 桌面端的鼠标拖拽
         const onMouseUp = () => {
-            document.removeEventListener('mousemove', onMouseMove);
+            document.removeEventListener('mousemove', onMove);
             document.removeEventListener('mouseup', onMouseUp);
         };
 
@@ -22,8 +23,22 @@ function main() {
             e.preventDefault();
             offsetX = e.offsetX;
             offsetY = e.offsetY;
-            document.addEventListener('mousemove', onMouseMove);
+            document.addEventListener('mousemove', onMove);
             document.addEventListener('mouseup', onMouseUp);
+        });
+
+        // 移动端的触摸拖拽
+        const onTouchUp = () => {
+            document.removeEventListener('touchmove', onMove);
+            document.removeEventListener('touchend', onTouchUp);
+        };
+
+        display_img.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            offsetX = e.offsetX;
+            offsetY = e.offsetY;
+            document.addEventListener('touchmove', onMove);
+            document.addEventListener('touchup', onTouchUp);
         });
     }
 
@@ -184,6 +199,14 @@ function main() {
                     offsetY = e.offsetY;
                     document.addEventListener('mousemove', onMouseMove);
                     document.addEventListener('mouseup', onMouseUp);
+                });
+
+                display_img.removeEventListener('touchstart', (e) => {
+                    e.preventDefault();
+                    offsetX = e.offsetX;
+                    offsetY = e.offsetY;
+                    document.addEventListener('touchmove', onMove);
+                    document.addEventListener('touchup', onTouchUp);
                 });
             }
         }
