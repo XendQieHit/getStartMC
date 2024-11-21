@@ -5,41 +5,66 @@ function main() {
     // 拖拽
     function drag(display_img) {
 
-        let offsetX, offsetY;
+        let offsetX, offsetY; // 桌面端检测使用offset
+        let old_clientX, old_clientY; // 移动端检测使用client，啊移动端为什么没有offset啊啊
 
-        const onMove = (e) => {
-            e.preventDefault();
-            display_img.style.left = (e.clientX - offsetX) + 'px';
-            display_img.style.top = (e.clientY - offsetY) + 'px';
-        };
+        if (window.innerWidth > 769) {
 
-        // 桌面端的鼠标拖拽
-        const onMouseUp = () => {
-            document.removeEventListener('mousemove', onMove);
-            document.removeEventListener('mouseup', onMouseUp);
-        };
+            // 桌面端的鼠标拖拽
+            const onMove = (e) => {
+                e.preventDefault();
+                display_img.style.left = (e.clientX - offsetX) + 'px';
+                display_img.style.top = (e.clientY - offsetY) + 'px';
+            };
+            
+            const onMouseUp = () => {
+                document.removeEventListener('mousemove', onMove);
+                document.removeEventListener('mouseup', onMouseUp);
+            };
+    
+            display_img.addEventListener('mousedown', (e) => {
+                e.preventDefault();
+                offsetX = e.offsetX;
+                offsetY = e.offsetY;
+                document.addEventListener('mousemove', onMove);
+                document.addEventListener('mouseup', onMouseUp);
+            });
 
-        display_img.addEventListener('mousedown', (e) => {
-            e.preventDefault();
-            offsetX = e.offsetX;
-            offsetY = e.offsetY;
-            document.addEventListener('mousemove', onMove);
-            document.addEventListener('mouseup', onMouseUp);
-        });
+        } else {
 
-        // 移动端的触摸拖拽
-        const onTouchUp = () => {
-            document.removeEventListener('touchmove', onMove);
-            document.removeEventListener('touchend', onTouchUp);
-        };
+            // 移动端的触摸拖拽
+            // 触摸移动事件
+            const onTouchMove = (e) => {
+                const touch = e.touches[0];
+                const dx = touch.clientX - old_clientX;
+                const dy = touch.clientY - old_clientY;
 
-        display_img.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-            offsetX = e.offsetX;
-            offsetY = e.offsetY;
-            document.addEventListener('touchmove', onMove);
-            document.addEventListener('touchup', onTouchUp);
-        });
+                // 使用方法获取图片位置
+                const rect = display_img.getBoundingClientRect();
+
+                display_img.style.top = (rect.top + dy) + 'px';
+                display_img.style.left = (rect.left + dx) + 'px';
+
+                old_clientX = touch.clientX;
+                old_clientY = touch.clientY;
+            };
+            
+            // 触摸结束事件
+            const onTouchEnd = () => {
+                document.removeEventListener('touch', onTouchMove);
+                document.removeEventListener('touchend', onTouchEnd);
+            };
+    
+            // 添加触摸监听
+            display_img.addEventListener('touchstart', (e) => {
+                e.preventDefault();
+                const touch = e.touches[0];
+                old_clientX = touch.clientX;
+                old_clientY = touch.clientY;
+                document.addEventListener('touchmove', onTouchMove);
+                document.addEventListener('touchend', onTouchEnd);
+            });
+        }
     }
 
     // 缩放
@@ -47,6 +72,7 @@ function main() {
         let di_height, di_width;
         let wheelTimeout = null;
 
+        
         display_img.onload = () => {
             di_height = display_img.clientHeight;
             di_width = display_img.clientWidth;         
@@ -73,14 +99,11 @@ function main() {
 
             // 调整图片位置
             // 获取目前的坐标
-            let di_top = display_img.style.top.match(/.*(?=px)/);
-            let di_left = display_img.style.left.match(/.*(?=px)/);
-            di_top = +di_top;
-            di_left = +di_left;
+            const rect = display_img.getBoundingClientRect();
 
             // 将图片位置调整到鼠标焦点位置
-            display_img.style.top = `${di_top - (scale - 1) * e.offsetY}px`;
-            display_img.style.left = `${di_left - (scale - 1) * e.offsetX}px`;
+            display_img.style.top = `${rect.top - (scale - 1) * e.offsetY}px`;
+            display_img.style.left = `${rect.left - (scale - 1) * e.offsetX}px`;
         }
         
         function throttledOnWheel(e) {
@@ -141,7 +164,11 @@ function main() {
                 display_img.src = img.src;
                 display_img.classList = 'display_img';
                 
+                console.log('-----------', display_img.style.top, display_img.style.left);
+
                 img_content.appendChild(display_img);
+
+                console.log(display_img.style.top, display_img.style.left);
                 
                 // 初始化图片
                 display_img.onload = () => {
@@ -153,11 +180,15 @@ function main() {
                     let di_top = window.innerHeight / 2 - display_img.clientHeight / 2;
                     let di_left = window.innerWidth / 2 - display_img.clientWidth / 2;
 
+                    console.log(display_img.clientHeight, display_img.clientWidth);
+
                     display_img.style.top = `${di_top}px`;
                     display_img.style.left = `${di_left}px`;
                 }
 
                 if(display_img.complete) display_img.onload();
+
+                console.log(display_img.style.top, display_img.style.left);
 
                 // 展示图片窗口
                 content_img_zoomify.classList.remove('hidden');
@@ -193,20 +224,23 @@ function main() {
                 });
                 
                 // 拖拽
+                // 桌面端
                 display_img.removeEventListener('mousedown', (e) => {
                     e.preventDefault();
                     offsetX = e.offsetX;
                     offsetY = e.offsetY;
-                    document.addEventListener('mousemove', onMouseMove);
+                    document.addEventListener('mousemove', onMove);
                     document.addEventListener('mouseup', onMouseUp);
                 });
 
+                // 移动端
                 display_img.removeEventListener('touchstart', (e) => {
                     e.preventDefault();
-                    offsetX = e.offsetX;
-                    offsetY = e.offsetY;
-                    document.addEventListener('touchmove', onMove);
-                    document.addEventListener('touchup', onTouchUp);
+                    const touch = e.touches[0];
+                    old_clientX = touch.clientX;
+                    old_clientY = touch.clientY;
+                    document.addEventListener('touchmove', onTouchMove);
+                    document.addEventListener('touchend', onTouchEnd);
                 });
             }
         }
