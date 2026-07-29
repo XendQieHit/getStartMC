@@ -5,7 +5,7 @@ import { gen_docs_title } from "./gen_docs_title.mjs";
 import { zoomify_imgs } from "./zoomify_img.mjs";
 import { get_pg_list } from "./get_pg_list.mjs";
 import { get_ql_menu } from "./get_ql_menu.mjs";
-import { getQueryParams } from "./get_queryparam.mjs";
+import { getQueryParams } from "../get_queryparam.mjs";
 
 document.addEventListener('DOMContentLoaded', async function() {
     if (!getQueryParams('Path')) {
